@@ -1,4 +1,4 @@
-import { viteBundler } from "@vuepress/bundler-vite";
+// import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 //import { webpackBundler } from "@vuepress/bundler-webpack";
 //import { defineUserConfig } from "@vuepress/cli";

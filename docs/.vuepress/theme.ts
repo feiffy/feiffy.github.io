@@ -98,8 +98,8 @@ export default hopeTheme({
     //评论配置（仅做样例，记得更换）
     comment: {
       //部署 Waline：https://waline.js.org/guide/get-started.html
-      provider: "Waline",
-      serverURL: "https://waline.newzone.top",
+      provider: "",
+      serverURL: "",
       pageview: true,
       //Waline 等级标签
       walineLocales: {
