@@ -3,8 +3,8 @@ import { defineUserConfig } from "vuepress";
 //import { webpackBundler } from "@vuepress/bundler-webpack";
 //import { defineUserConfig } from "@vuepress/cli";
 import { searchPlugin } from "@vuepress/plugin-search";
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";
-import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+// import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+// import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { feedPlugin } from "vuepress-plugin-feed2";
 import { componentsPlugin } from "vuepress-plugin-components";
 import { path } from "@vuepress/utils";
@@ -14,7 +14,7 @@ export default defineUserConfig({
   //网站语言，默认为中文
   lang: "zh-CN",
   //网站标题
-  title: "LearnData-开源笔记",
+  title: "FEIFFY's 开源笔记",
   //网站描述
   description: "开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。",
 
@@ -30,19 +30,19 @@ export default defineUserConfig({
 
   plugins: [
     //algolia 全文搜索：没设置爬虫的话，需删除 docsearchPlugin 区块以使用节点搜索
-    docsearchPlugin({
-      indexName: 'newzone',
-      appId: 'M4EXXEZIEG',
-      apiKey: 'fd8891a9c4cc21e0ef4f11bf44f7a11e',
-    }),
+    // docsearchPlugin({
+    //   indexName: 'newzone',
+    //   appId: 'M4EXXEZIEG',
+    //   apiKey: 'fd8891a9c4cc21e0ef4f11bf44f7a11e',
+    // }),
     //本地搜索：默认情况下，该插件会将页面标题和小标题作为搜索索引。
     searchPlugin({
       // 你的选项
     }),
     //谷歌分析 ID
-    googleAnalyticsPlugin({
-      id: "G-RWKZTY2P9R",
-    }),
+    // googleAnalyticsPlugin({
+    //   id: "G-RWKZTY2P9R",
+    // }),
     //组件库
     componentsPlugin({
       backToTop: true,
