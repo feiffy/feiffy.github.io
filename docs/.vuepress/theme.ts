@@ -21,8 +21,8 @@ export default hopeTheme({
 
   //页面元数据：贡献者，最后修改时间，编辑链接
   contributors: false,
-  lastUpdated: true,
-  editLink: true,
+  lastUpdated: false,
+  editLink: false,
 
   //深色模式配置
   //darkmode: "disable",
@@ -35,7 +35,7 @@ export default hopeTheme({
   fullscreen: true,
 
   // 默认为 GitHub. 同时也可以是一个完整的 URL
-  repo: "rockbenben/LearnData",
+  repo: "feiffy/LearnData",
   // 自定义仓库链接文字。默认从 `repo` 中自动推断为 "GitHub" / "GitLab" / "Gitee" / "Bitbucket" 其中之一，或是 "Source"。
   repoLabel: "GitHub",
   // 是否在导航栏内显示仓库链接，默认为 `true`
@@ -72,7 +72,7 @@ export default hopeTheme({
     articleInfo: ["Date", "Category", "Tag", "ReadingTime", "PageView"],
     name: "FEIFFY",
     avatar: "/avatar_self.webp",
-    description: "迷信新工具，热衷于研究开源软件、心理学理论，定期分享探索成果",
+    description: "",
     intro: "/intro.html",
     roundAvatar: true,
     medias: {
@@ -81,10 +81,10 @@ export default hopeTheme({
       Weibo: "",
       Wechat: "",
       少数派: [
-        "https://sspai.com/u/zqj05i4v/posts",
+        "",
         path.resolve(__dirname, "icons/sspai.svg"),
       ],
-      RSS: "https://newzone.top/rss.xml",
+      RSS: "",
     },
   },
 
