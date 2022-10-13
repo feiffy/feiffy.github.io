@@ -90,6 +90,8 @@ export default hopeTheme({
 
   plugins: {
 
+    seo: false,
+
     blog: {
       // 自动摘要
       autoExcerpt: true,

@@ -44,7 +44,7 @@ $ touch ~/.ssh/autorized_keys
 $ cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
-最后，我们修改相关目录的权限，只允许 <your username>(假设此处用户名为 feiffy) 用户访问。
+最后，我们修改相关目录的权限，只允许 `<your username>`(假设此处用户名为 feiffy) 用户访问。
 
 ``` bash
 $ chown -R feiffy:feiffy ~/.ssh
