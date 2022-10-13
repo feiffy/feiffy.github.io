@@ -6,10 +6,901 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 13 Oct 2022 03:41:49 GMT</pubDate>
-    <lastBuildDate>Thu, 13 Oct 2022 03:41:49 GMT</lastBuildDate>
+    <pubDate>Thu, 13 Oct 2022 03:43:31 GMT</pubDate>
+    <lastBuildDate>Thu, 13 Oct 2022 03:43:31 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <item>
+      <title>phpmyadmin not found</title>
+      <link>https://newzone.top/_posts/2016-11-16-phpmyadmin-not-found.html</link>
+      <guid>https://newzone.top/_posts/2016-11-16-phpmyadmin-not-found.html</guid>
+      <source url="https://newzone.top/rss.xml">phpmyadmin not found</source>
+      <pubDate>Wed, 16 Nov 2016 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>在 ubuntu 14.04 中使用：</p>
+<div><pre><code>$ <span>sudo</span> <span>apt-get</span> <span>install</span> phpmyadmin
+</code></pre><div aria-hidden="true"><div></div></div></div><p>安装好 phpmyadmin 之后，打开 <a href="http://localhost/phpmyadmin" target="_blank" rel="noopener noreferrer">http://localhost/phpmyadmin</a> ，不能访问，显示 404 Not Found，这不是逗我吗？</p>
+<p>搜索一番解决该问题：</p>
+<p>打开配置文件</p>
+<div><pre><code>$ <span>sudo</span> gedit /etc/apache2/apache2.conf
+</code></pre><div aria-hidden="true"><div></div></div></div><p>在最后添加一行：</p>
+<div><pre><code>Include /etc/phpmyadmin/apache.conf
+</code></pre><div aria-hidden="true"><div></div></div></div><p>然后重启apche2</p>
+<div><pre><code>$ <span>sudo</span> <span>service</span> apache2 restart
+</code></pre><div aria-hidden="true"><div></div></div></div><h3 id="参考" tabindex="-1"> 参考</h3>
+<ul>
+<li><a href="http://askubuntu.com/questions/55280/phpmyadmin-is-not-working-after-i-installed-it" target="_blank" rel="noopener noreferrer">http://askubuntu.com/questions/55280/phpmyadmin-is-not-working-after-i-installed-it</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Ubuntu 16.04 LAMP server 指南 - 配置 Apache2.4,PHP7,和MariaDB（而不是MySQL）</title>
+      <link>https://newzone.top/_posts/2016-12-09-install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp.html</link>
+      <guid>https://newzone.top/_posts/2016-12-09-install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp.html</guid>
+      <source url="https://newzone.top/rss.xml">Ubuntu 16.04 LAMP server 指南 - 配置 Apache2.4,PHP7,和MariaDB（而不是MySQL）</source>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>原文：<a href="https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp/" target="_blank" rel="noopener noreferrer">https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp/</a></p>
+<p>昨天在虚拟机里面安装ubuntu server ，然后配置php开发环境，参考了这篇文章，一次性把所有的东西都安装配置好了，所以想把这篇文章记录下来。希望能够帮助到初学者一次性搞定这些配置（避免纠结），然后就可以愉快地编程了，嘿嘿。</p>
+<p>以下是我翻译的内容，完全对照原文，没有自己改动的部分（因为原文已经很完美了）：</p>
+<p><strong>LAMP</strong> 是 Linux,Apache,MySQL,PHP的缩写。本文教你如何在 ubuntu 16.04(Xenial Xerus) server 上安装 Apache2，PHP7（mod_php）和MySQL。此外，还将安装 PHPMyAdmin 工具用于管理 MySQL。</p>
+<h3 id="说明" tabindex="-1"> 说明</h3>
+<p>本文中，我使用 <a href="http://server1.example.com" target="_blank" rel="noopener noreferrer">server1.example.com</a> 作为主机名，IP为：192.168.1.100。你如果跟我不同，在相应的地方替换就行了。</p>
+<p>我推荐使用 minimal Ubuntu server 作为本文操作的基础。</p>
+<p>我在root权限下运行所有的命令，所以确保你使用的是root账户：</p>
+<div><pre><code>$ <span>sudo</span> <span>su</span>
+</code></pre><div aria-hidden="true"><div></div></div></div><h3 id="安装-mariadb-作为-mysql-的替换" tabindex="-1"> 安装 MariaDB 作为 MySQL 的替换</h3>
+<p>我安装的是 MariaDB 而不是 MySQL。MariaDB 是 MySQL 的作者 Monty Widenius 所维护的 MySQL 分支版本。MariaDB 兼容 MySQL，并且增加了功能，提高了性能。运行下面的命令来安装 MariaDB-server 和 client:</p>
+<div><pre><code>$ <span>apt-get</span> <span>install</span> mariadb-server mariadb-client
+</code></pre><div aria-hidden="true"><div></div></div></div><p>然后设置 MariaDB 的 root 密码：</p>
+<div><pre><code>$ mysql_secure_installation
+</code></pre><div aria-hidden="true"><div></div></div></div><p>然后，出现一些提示,按照红色提示来操作就行了：</p>
+<div><pre><code>Enter current password <span>for</span> root <span>(</span>enter <span>for</span> none<span>)</span>: <span>&lt;</span>-- press enter
+Set root password? <span>[</span>Y/n<span>]</span> <span>&lt;</span>-- y
+New password: <span>&lt;</span>-- Enter the new MariaDB root password here
+Re-enter new password: <span>&lt;</span>-- Repeat the password
+Remove anonymous users? <span>[</span>Y/n<span>]</span> <span>&lt;</span>-- y
+Disallow root login remotely? <span>[</span>Y/n<span>]</span> <span>&lt;</span>-- y
+Reload privilege tables now? <span>[</span>Y/n<span>]</span> <span>&lt;</span>-- y
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>使用 mysql 命令测试是否能登录 MariaDB：</p>
+<div><pre><code>$ mysql <span>-u</span> root <span>-p</span>
+</code></pre><div aria-hidden="true"><div></div></div></div><p>再输入上面设置 root 密码，就会出现如下所示：</p>
+<p><img src="https://images2015.cnblogs.com/blog/941616/201612/941616-20161209182512710-1592568295.png" alt="" loading="lazy"></p>
+<p>要离开 MariaDB shell，输入 quit 和 回车键就行了。</p>
+<h3 id="安装-apache-2-4" tabindex="-1"> 安装 Apache 2.4</h3>
+<p>Apache 2 可以直接从 Ubuntu 包中获取，只要这样：</p>
+<div><pre><code>$ <span>apt-get</span> <span>install</span> apache2
+</code></pre><div aria-hidden="true"><div></div></div></div><p>现在打开浏览器，输入 <a href="http://192.168.1.100" target="_blank" rel="noopener noreferrer">http://192.168.1.100</a> ，就能看到 Apache 2 默认页面：</p>
+<p><img src="https://images2015.cnblogs.com/blog/941616/201612/941616-20161209182823679-1160699445.png" alt="" loading="lazy"></p>
+<p>apache 默认文章根目录是 /var/www/html，其主要配置文件为：/etc/apache2/apache2.conf。其配置系统的说明文档在 /usr/share/doc/apache2/README.Debian.gz.</p>
+<h3 id="安装-php-7" tabindex="-1"> 安装 PHP 7</h3>
+<p>安装 PHP 7 和 Apache PHP 模块：</p>
+<div><pre><code>$ <span>apt-get</span> <span>install</span> php7.0 libapache2-mod-php7.0
+</code></pre><div aria-hidden="true"><div></div></div></div><p>然后重启 Apache</p>
+<div><pre><code>$ systemctl restart apache2
+</code></pre><div aria-hidden="true"><div></div></div></div><h3 id="测试-php-获得一些细节信息" tabindex="-1"> 测试 PHP 获得一些细节信息</h3>
+<p>默认web站点的文档根目录是 /var/www/html ，我在该目录创建一个info.php文件，然后在浏览器中访问它。这个文件能够显示有关PHP安装的详细信息。</p>
+<div><pre><code>$ <span>vim</span> /var/www/html/info.php
+</code></pre><div aria-hidden="true"><div></div></div></div><p>输入文件内容：</p>
+<div><pre><code><span><span>&lt;?php</span>
+<span>phpinfo</span><span>(</span><span>)</span><span>;</span>
+</span></code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>改变info.php文件的所有者为 www-data 用户和组</p>
+<div><pre><code>$ <span>chown</span> www-data:www-data /var/www/html/info.php
+</code></pre><div aria-hidden="true"><div></div></div></div><p>现在我们可以在浏览器中访问 <a href="http://192.168.1.100/info.php" target="_blank" rel="noopener noreferrer">http://192.168.1.100/info.php</a> ，结果如下图所示：</p>
+<p><img src="https://images2015.cnblogs.com/blog/941616/201612/941616-20161209184720585-809940705.png" alt="" loading="lazy"></p>
+<p>如你所看到的，PHP7.0 正在运行，从 Server API 行可以看出，它是通过 Apache 2.0 Handler 运行的，继续向下滚动页面，你就看见所有已经启用的模块。MySQL并不在其中，这是因为我们还没有对PHP添加MySQL/MariaDB支持。</p>
+<h3 id="php-启用-mysql-mariadb-支持" tabindex="-1"> PHP 启用 MySQL / MariaDB 支持</h3>
+<p>为了使 PHP 支持 MySQL，可以安装 php7.0-mysql 包。同时也可以安装其他所需要的 PHP 模块，使用下面命令来搜索可用的 PHP 模块：</p>
+<div><pre><code>$ <span>apt-cache</span> search php7.0
+</code></pre><div aria-hidden="true"><div></div></div></div><p>选择一些模块，安装之：</p>
+<div><pre><code>$ <span>apt-get</span> <span>-y</span> <span>install</span> php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php-pear php-imagick php7.0-imap php7.0-mcrypt php-memcache  php7.0-pspell php7.0-recode php7.0-sqlite3 php7.0-tidy php7.0-xmlrpc php7.0-xsl php7.0-mbstring php-gettext
+</code></pre><div aria-hidden="true"><div></div></div></div><p>重启 Apache2</p>
+<div><pre><code>$ systemctl restart apache2
+</code></pre><div aria-hidden="true"><div></div></div></div><p><img src="https://images2015.cnblogs.com/blog/941616/201612/941616-20161209190557179-563578384.png" alt="" loading="lazy"></p>
+<p>如上图所示，PHP已经启用了 MySQL/MariaDB 支持。</p>
+<h3 id="安装-apcu-php-缓存来加速-php-运行" tabindex="-1"> 安装 APCu PHP 缓存来加速 PHP 运行</h3>
+<p>APCu 是一个免费的 PHP opcode cacher 用来缓存和优化 PHP 中间代码。推荐安装它来加速PHP速度。</p>
+<p>安装：</p>
+<div><pre><code>$ <span>apt-get</span> <span>install</span> php-apcu
+</code></pre><div aria-hidden="true"><div></div></div></div><p>重启 Apache：</p>
+<div><pre><code>$ systemctl restart apache2
+</code></pre><div aria-hidden="true"><div></div></div></div><p>刷新一下 <a href="http://192.168.1.100/info.php%EF%BC%8C%E7%9C%8B%E5%88%B0" target="_blank" rel="noopener noreferrer">http://192.168.1.100/info.php，看到</a> apcu 模块：</p>
+<p><img src="https://images2015.cnblogs.com/blog/941616/201612/941616-20161209191033163-1143529792.png" alt="" loading="lazy"></p>
+<p>请删除 info.php 文件，它会显示你服务器的敏感信息。运行下面的命令来删除：</p>
+<div><pre><code>$ <span>rm</span> <span>-f</span> /var/www/html/info.php
+</code></pre><div aria-hidden="true"><div></div></div></div><h3 id="启用-apache-的-ssl-网站支持" tabindex="-1"> 启用 Apache 的 SSL 网站支持</h3>
+<p>SSL/TLS 是一个安全层，用于加密浏览器与服务器之间的连接。使用下面的命令以启用 https:// 支持</p>
+<div><pre><code>$ a2enmod ssl
+$ a2ensite default-ssl
+</code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>这两行命令启用了 ssl 模块，并在 /etc/apache2/sites-enabled 文件夹中添加了 /etc/apache2/sites-available/default-ssl.conf 的链接，以将其包括到apache 配置之中。然后重启apache来启用新配置：</p>
+<div><pre><code>$ systemctl restart apache2
+</code></pre><div aria-hidden="true"><div></div></div></div><p>现在浏览器打开 <a href="https://192.168.1.100" target="_blank" rel="noopener noreferrer">https://192.168.1.100</a> ，看到：</p>
+<p><img src="https://images2015.cnblogs.com/blog/941616/201612/941616-20161209191755616-43146619.png" alt="" loading="lazy"></p>
+<p>你看到了一个 SSL 警告：该服务器的 SSL 证书 是 “自己颁发给自己的”，这表示浏览器不信任该证书，所以你必须先接受安全警告，然后才能打开apache 默认页面：</p>
+<p><img src="https://images2015.cnblogs.com/blog/941616/201612/941616-20161209191955913-207794574.png" alt="" loading="lazy"></p>
+<p>浏览器地址栏URL前面的 “绿色的锁”表明连接是经过加密的。要想解除 SSL 警告，可以从 SSL 证书颁发机构获得一个官方签名的SSL证书，然后替换默认自带的证书：/etc/ssl/certs/ssl-cert-snakeoil.pem。</p>
+<h3 id="安装-phpmyadmin" tabindex="-1"> 安装 phpMyAdmin</h3>
+<p>通过phpMyAdmin可以操作MySQL数据库。安装命令：</p>
+<div><pre><code>$ <span>apt-get</span> <span>install</span> phpmyadmin
+</code></pre><div aria-hidden="true"><div></div></div></div><p>然后看到这些提示，按照红色提示输入就行了：</p>
+<div><pre><code>Web server to configure automatically: <span>&lt;</span>-- Select the option: apache2
+Configure database <span>for</span> phpmyadmin with dbconfig-common? <span>&lt;</span>-- Yes
+MySQL application password <span>for</span> phpmyadmin: <span>&lt;</span>-- Press enter, <span>apt</span> will create a random password automatically.
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>MariaDB 默认为root用户启用了“unix_socket”插件，这个插件会阻止root用户登录phpmyadmin和root用户到MySQL的TCP连接。因此，使用命令禁用了它：</p>
+<div><pre><code><span>echo</span> <span>"update user set plugin='' where User='root'; flush privileges;"</span> <span>|</span> mysql <span>-u</span> root <span>-p</span> mysql
+</code></pre><div aria-hidden="true"><div></div></div></div><p>然后输入 MariaDB root 密码。</p>
+<p>之后，你就可以通过 <a href="http://192.168.1.100/phpmyadmin/" target="_blank" rel="noopener noreferrer">http://192.168.1.100/phpmyadmin/</a> 来访问：</p>
+<p><img src="https://images2015.cnblogs.com/blog/941616/201612/941616-20161209192856772-78104055.png" alt="" loading="lazy"></p>
+<p><img src="https://images2015.cnblogs.com/blog/941616/201612/941616-20161209192906351-426799837.png" alt="" loading="lazy"></p>
+<hr>
+<p>另外，说明一些操作过程中可能会遇到的问题以及解决办法。</p>
+<p>（1）安装完访问 phpmyadmin 时，出现错误：The reqeusted URL /phpmyadmin was not found on this server</p>
+<p>我的解决办法在这里：<a href="/_posts/phpmyadmin-not-found.html">PHPMYADMIN NOT FOUND</a></p>
+]]></content:encoded>
+      <enclosure url="https://images2015.cnblogs.com/blog/941616/201612/941616-20161209182512710-1592568295.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Ubuntu apache2.4 设置虚拟主机</title>
+      <link>https://newzone.top/_posts/2016-12-22-ubuntu-apache24-vhost.html</link>
+      <guid>https://newzone.top/_posts/2016-12-22-ubuntu-apache24-vhost.html</guid>
+      <source url="https://newzone.top/rss.xml">Ubuntu apache2.4 设置虚拟主机</source>
+      <pubDate>Thu, 22 Dec 2016 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>每次重装系统如何配置都上网找，搞半天，都是不对的，还不如自己记下来，以作参考呢。</p>
+<p>我的项目目录是 <code>/home/feiffy/demo/test/public</code>，映射的域名是 <a href="http://test.com" target="_blank" rel="noopener noreferrer">test.com</a>，这样在浏览器输入 <a href="http://test.com" target="_blank" rel="noopener noreferrer">test.com</a> 就可以直接打开我的项目啦。</p>
+<p>下面是配置的步骤：</p>
+<p>1）先保证自己项目目录存在啊：<code>$ mkdir /home/feiffy/demo/test</code></p>
+<p>2）进入apache的配置文件目录：<code>$ cd /etc/apache2/sites-available/</code></p>
+<p>3）建立一个以[域名.conf]为名的配置文件：<code>$ sudo gedit test.com.conf</code>，输入以下代码并保存：</p>
+<div><pre><code>&lt;VirtualHost *:80&gt;
+# 设置域名
+ServerName test.com
+# 设置项目目录
+DocumentRoot /home/feiffy/demo/test/public
+
+# 设置目录权限
+&lt;Directory /home/feiffy/demo/test/public&gt;
+AllowOverride All
+Require all granted
+&lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>4）启用配置：<code>$ sudo a2ensite test.com</code></p>
+<p>5）重启 apache2：<code>$ sudo service apache2 reload</code></p>
+<p>6）打开host文件：<code>$ sudo gedit /etc/hosts</code>
+添加一行：<code>127.0.0.1 test.com</code></p>
+<p>7）最后在浏览器输入 <a href="http://test.com" target="_blank" rel="noopener noreferrer">test.com</a>，就打开了主页文档 index.html，测试成功</p>
+<h2 id="faqs" tabindex="-1"> FAQs</h2>
+<ul>
+<li><strong>打开浏览器输入 <code>test.com/index.html</code> 出现：<code>&quot;Forbidden You don't have permission to access /index.html on this server&quot;</code>.</strong></li>
+</ul>
+<p>这是没有权限的问题，设置项目目录权限即可</p>
+<div><pre><code>$ <span>chown</span> www-data <span>-R</span> /home/feiffy/demo/test/public
+</code></pre><div aria-hidden="true"><div></div></div></div><ul>
+<li><strong>配置了新的端口8001，一直没有效果。</strong></li>
+</ul>
+<p>这是因为没有配置监听，需要在 apache2.conf 或者 port.conf 增加一行：</p>
+<div><pre><code>Listen <span>8001</span>
+</code></pre><div aria-hidden="true"><div></div></div></div><h2 id="参考" tabindex="-1"> 参考</h2>
+<ul>
+<li><a href="https://httpd.apache.org/docs/2.4/vhosts/examples.html" target="_blank" rel="noopener noreferrer">https://httpd.apache.org/docs/2.4/vhosts/examples.html</a> 官方示例</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Zend Framework 1 - Quick Start</title>
+      <link>https://newzone.top/_posts/2017-01-05-zend-framework-1-quick-start.html</link>
+      <guid>https://newzone.top/_posts/2017-01-05-zend-framework-1-quick-start.html</guid>
+      <source url="https://newzone.top/rss.xml">Zend Framework 1 - Quick Start</source>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="创建-zend-项目" tabindex="-1"> 创建 Zend 项目</h2>
+<p>要创建 Zend 项目，首先要下载并解压 Zend Framework。</p>
+<h2 id="安装-zend-framework" tabindex="-1"> 安装 Zend Framework</h2>
+<p>下载最新的 <a href="https://packages.zendframework.com/releases/ZendFramework-1.12.20/ZendFramework-1.12.20.tar.gz" target="_blank" rel="noopener noreferrer">Zend Framework 1.12.20 源码包</a>，（我们使用的是 Zend Framework 1，所以下面的内容都是基于 Zend 1）</p>
+<p>解压到合适的地方（比如：/home/xxx/bin/）.</p>
+<p><strong>注：</strong> <code>/home/xxx/bin</code> 是我偏爱的目录，如果你设定了自己的目录，就应该替换下面命令中相应的地方</p>
+<p><code>$ tar -xzvf ZendFramework-1.12.20.tar.gz -C /home/xxx/bin</code></p>
+<p>这样 Zend Framework 就安装在了 /home/xxx/bin/ZendFramework-1.12.20</p>
+<p><strong>注1：</strong><a href="https://framework.zend.com/downloads/archives" target="_blank" rel="noopener noreferrer">Zend Framework 各个版本下载</a><br>
+<strong>注2：</strong><code>$</code> 符号表示当前环境是 Linux 命令行终端，在等待输入一个人命令。</p>
+<h2 id="创建项目" tabindex="-1"> 创建项目</h2>
+<p>在 Zend 安装目录下的 bin/ 目录下有 <a href="http://zf.sh" target="_blank" rel="noopener noreferrer">zf.sh</a> 脚本文件，你需要在系统path目录下创建该文件的链接，然后就可以在命令行中任何地方使用zf命令创建项目了。</p>
+<div><pre><code>$ <span>sudo</span> <span>ln</span> <span>-s</span> /home/xxx/bin/ZendFramework-1.12.20/bin/zf.sh /usr/local/bin/zf
+</code></pre><div aria-hidden="true"><div></div></div></div><p>打开命令行(∧ + Alt + T)，切换到你想创建项目的位置，假如你想在 ~/demo/ 目录下创建 Zend 项目：<code>cd ~/demo/</code>。</p>
+<p>执行下面的命令创建 <strong>quickstart</strong> 项目：</p>
+<p><code>$ zf create project quickstart</code></p>
+<p>这样就创建了 /home/xxx/demo/quickstart，并且在 quickstart 目录下自动创建了 Zend 项目的一些目录结构。其项目结构如下：</p>
+<div><pre><code>quickstart
+|-- application
+|   |-- Bootstrap.php
+|   |-- configs
+|   |   `-- application.ini
+|   |-- controllers
+|   |   |-- ErrorController.php
+|   |   `-- IndexController.php
+|   |-- models
+|   `-- views
+|       |-- helpers
+|       `-- scripts
+|           |-- error
+|           |   `-- error.phtml
+|           `-- index
+|               `-- index.phtml
+|-- library
+|-- public
+|   |-- .htaccess
+|   `-- index.php
+`-- tests
+    |-- application
+    |   `-- bootstrap.php
+    |-- library
+    |   `-- bootstrap.php
+    `-- phpunit.xml
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>此时，只是创建了 Zend 项目结构，你还需要把 Zend Framework 添加到 quickstart 项目中，有两种方式，一中是创建一个链接，把 zend 框架下的 library 目录链接到 quickstart/library ，另一种方式是直接复制 zend 框架下的 library 目录替换掉 quickstart/library。</p>
+<div><pre><code><span># Symlink</span>
+$ <span>cd</span> library
+$ <span>ln</span> <span>-s</span> /home/xxx/bin/ZendFramework-1.12.20/library/Zend <span>.</span>
+
+<span># or copy</span>
+$ <span>cd</span> library
+$ <span>cp</span> <span>-r</span> /home/xxx/bin/ZendFramework-1.12.20/library/Zend <span>.</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>这样就可以看到 quickstart/library/Zend 目录了。</p>
+<h2 id="项目启动文件" tabindex="-1"> 项目启动文件</h2>
+<p>Bootstrap 类定义了 Zend 项目启动时要初始化的资源和组件。默认地，Zend Framework 初始化了 Front Controller，然后它使用 application/controllers/ 作为寻找 action controller 的默认路径。这个类如下：</p>
+<div><pre><code><span>// application/Bootstrap.php</span>
+ 
+<span>class</span> <span>Bootstrap</span> <span>extends</span> <span>Zend_Application_Bootstrap_Bootstrap</span>
+<span>{</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>如你所见，这里面没有什么内容。</p>
+<h2 id="项目配置文件" tabindex="-1"> 项目配置文件</h2>
+<p>默认配置文件放在：<em>application/configs/application.ini</em>，包含一些基本的指令，比如设置php环境，设置启动类，设置 action controller 等。文件内容如下：</p>
+<div><pre><code><span>; application/configs/application.ini</span>
+ 
+<span><span>[</span><span>production</span><span>]</span></span>
+<span>phpSettings.display_startup_errors</span> <span>=</span> <span>0</span>
+<span>phpSettings.display_errors</span> <span>=</span> <span>0</span>
+<span>includePaths.library</span> <span>=</span> <span>APPLICATION_PATH "/../library"</span>
+<span>bootstrap.path</span> <span>=</span> <span>APPLICATION_PATH "/Bootstrap.php"</span>
+<span>bootstrap.class</span> <span>=</span> <span>"<span>Bootstrap</span>"</span>
+<span>appnamespace</span> <span>=</span> <span>"<span>Application</span>"</span>
+<span>resources.frontController.controllerDirectory</span> <span>=</span> <span>APPLICATION_PATH "/controllers"</span>
+<span>resources.frontController.params.displayExceptions</span> <span>=</span> <span>0</span>
+ 
+<span><span>[</span><span>staging : production</span><span>]</span></span>
+ 
+<span><span>[</span><span>testing : production</span><span>]</span></span>
+<span>phpSettings.display_startup_errors</span> <span>=</span> <span>1</span>
+<span>phpSettings.display_errors</span> <span>=</span> <span>1</span>
+ 
+<span><span>[</span><span>development : production</span><span>]</span></span>
+<span>phpSettings.display_startup_errors</span> <span>=</span> <span>1</span>
+<span>phpSettings.display_errors</span> <span>=</span> <span>1</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>关于这个文件有几个要点：<br>
+(1) 使用 ini 配置文件时，你可以直接引用常量，<strong>APPLICATION_PATH</strong> 就是一个常量。<br>
+(2) 这个文件被分成几个部分：production,staging,testing 和 development。后面三个包括了 production 的设置。不同的环境其配置分开，这样便于开发和调试。</p>
+<h2 id="action-controller-控制器" tabindex="-1"> Action Controller 控制器</h2>
+<p>应用程序的 action controller 定义了程序流程，把用户请求映射到合适的 model 和 view。</p>
+<p>一个 action controller 应包含一个或多个以<strong>Action</strong>结尾的方法，这些方法可以通过 web 请求访问到。默认地，Zend Framework URLs 遵循 /controller/action 的模式，其中 controller 就映射 action controller 名字（以Controller作为后缀），而 action 就映射到 action 方法（以Action作为后缀）。</p>
+<p>通常，需要一个 IndexController，它表示网站首页，和一个 ErrorController，它表示诸如 HTTP404、HTTP500 等错误页面.</p>
+<p>初始 IndexController 代码如下：</p>
+<div><pre><code><span>// application/controllers/IndexController.php</span>
+ 
+<span>class</span> <span>IndexController</span> <span>extends</span> <span>Zend_Controller_Action</span>
+<span>{</span>
+ 
+    <span>public</span> <span>function</span> <span>init</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>/* Initialize action controller here */</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>indexAction</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>// action body</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>初始 ErrorController 代码如下：</p>
+<div><pre><code><span>// application/controllers/ErrorController.php</span>
+ 
+<span>class</span> <span>ErrorController</span> <span>extends</span> <span>Zend_Controller_Action</span>
+<span>{</span>
+ 
+    <span>public</span> <span>function</span> <span>errorAction</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>$errors</span> <span>=</span> <span>$this</span><span>-></span><span>_getParam</span><span>(</span><span>'error_handler'</span><span>)</span><span>;</span>
+ 
+        <span>switch</span> <span>(</span><span>$errors</span><span>-></span><span>type</span><span>)</span> <span>{</span>
+            <span>case</span> <span>Zend_Controller_Plugin_ErrorHandler</span><span>::</span><span>EXCEPTION_NO_ROUTE</span><span>:</span>
+            <span>case</span> <span>Zend_Controller_Plugin_ErrorHandler</span><span>::</span><span>EXCEPTION_NO_CONTROLLER</span><span>:</span>
+            <span>case</span> <span>Zend_Controller_Plugin_ErrorHandler</span><span>::</span><span>EXCEPTION_NO_ACTION</span><span>:</span>
+ 
+                <span>// 404 error -- controller or action not found</span>
+                <span>$this</span><span>-></span><span>getResponse</span><span>(</span><span>)</span><span>-></span><span>setHttpResponseCode</span><span>(</span><span>404</span><span>)</span><span>;</span>
+                <span>$this</span><span>-></span><span>view</span><span>-></span><span>message</span> <span>=</span> <span>'Page not found'</span><span>;</span>
+                <span>break</span><span>;</span>
+            <span>default</span><span>:</span>
+                <span>// application error</span>
+                <span>$this</span><span>-></span><span>getResponse</span><span>(</span><span>)</span><span>-></span><span>setHttpResponseCode</span><span>(</span><span>500</span><span>)</span><span>;</span>
+                <span>$this</span><span>-></span><span>view</span><span>-></span><span>message</span> <span>=</span> <span>'Application error'</span><span>;</span>
+                <span>break</span><span>;</span>
+        <span>}</span>
+ 
+        <span>$this</span><span>-></span><span>view</span><span>-></span><span>exception</span> <span>=</span> <span>$errors</span><span>-></span><span>exception</span><span>;</span>
+        <span>$this</span><span>-></span><span>view</span><span>-></span><span>request</span>   <span>=</span> <span>$errors</span><span>-></span><span>request</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><h2 id="views-视图" tabindex="-1"> Views 视图</h2>
+<p>Zend Framework 中的 Views 是用普通 PHP 代码写的。View scripts 在 application/views/scripts/ 下面，它以控制器名字分文件夹组织起来。本例中，我们有一个 IndexController 和 ErrorController，因此相应地，也应在 View scripts 目录下有 index/ 和 error/ 子目录。在这个子目录中，又有每个 view scripts 文件，对应 Controller 中的 Action。本例中，使用 index/index.phtml 和 error/error.phtml。</p>
+<p>下面是默认的 index/index.phtml view script:</p>
+<div><pre><code><span>&lt;!-- application/views/scripts/index/index.phtml --></span>
+<span><span><span>&lt;</span>style</span><span>></span></span><span><span>
+ 
+    <span>a:link,
+    a:visited</span>
+    <span>{</span>
+        <span>color</span><span>:</span> #0398CA<span>;</span>
+    <span>}</span>
+ 
+    <span>span#zf-name</span>
+    <span>{</span>
+        <span>color</span><span>:</span> #91BE3F<span>;</span>
+    <span>}</span>
+ 
+    <span>div#welcome</span>
+    <span>{</span>
+        <span>color</span><span>:</span> #FFFFFF<span>;</span>
+        <span>background-image</span><span>:</span> <span><span>url</span><span>(</span>http://framework.zend.com/images/bkg_header.jpg<span>)</span></span><span>;</span>
+        <span>width</span><span>:</span>  600px<span>;</span>
+        <span>height</span><span>:</span> 400px<span>;</span>
+        <span>border</span><span>:</span> 2px solid #444444<span>;</span>
+        <span>overflow</span><span>:</span> hidden<span>;</span>
+        <span>text-align</span><span>:</span> center<span>;</span>
+    <span>}</span>
+ 
+    <span>div#more-information</span>
+    <span>{</span>
+        <span>background-image</span><span>:</span> <span><span>url</span><span>(</span>http://framework.zend.com/images/bkg_body-bottom.gif<span>)</span></span><span>;</span>
+        <span>height</span><span>:</span> 100%<span>;</span>
+    <span>}</span>
+ 
+</span></span><span><span><span>&lt;/</span>style</span><span>></span></span>
+<span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>welcome<span>"</span></span><span>></span></span>
+    <span><span><span>&lt;</span>h1</span><span>></span></span>Welcome to the <span><span><span>&lt;</span>span</span> <span>id</span><span><span>=</span><span>"</span>zf-name<span>"</span></span><span>></span></span>Zend Framework!<span><span><span>&lt;/</span>span</span><span>></span></span><span><span><span>&lt;</span>h1</span> <span>/></span></span>
+    <span><span><span>&lt;</span>h3</span><span>></span></span>This is your project's main page<span><span><span>&lt;</span>h3</span> <span>/></span></span>
+    <span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>more-information<span>"</span></span><span>></span></span>
+        <span><span><span>&lt;</span>p</span><span>></span></span>
+            <span><span><span>&lt;</span>img</span> <span>src</span><span><span>=</span><span>"</span>http://framework.zend.com/images/PoweredBy_ZF_4LightBG.png<span>"</span></span> <span>/></span></span>
+        <span><span><span>&lt;/</span>p</span><span>></span></span>
+ 
+        <span><span><span>&lt;</span>p</span><span>></span></span>
+            Helpful Links: <span><span><span>&lt;</span>br</span> <span>/></span></span>
+            <span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>http://framework.zend.com/<span>"</span></span><span>></span></span>Zend Framework Website<span><span><span>&lt;/</span>a</span><span>></span></span> |
+            <span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>http://framework.zend.com/manual/en/<span>"</span></span><span>></span></span>Zend Framework
+                Manual<span><span><span>&lt;/</span>a</span><span>></span></span>
+        <span><span><span>&lt;/</span>p</span><span>></span></span>
+    <span><span><span>&lt;/</span>div</span><span>></span></span>
+<span><span><span>&lt;/</span>div</span><span>></span></span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>error/error.phtml 稍微复杂一点，其中使用了php条件语句：</p>
+<div><pre><code><span>&lt;!-- application/views/scripts/error/error.phtml --></span>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN";
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd>
+<span><span><span>&lt;</span>html</span> <span>xmlns</span><span><span>=</span><span>"</span>http://www.w3.org/1999/xhtml<span>"</span></span><span>></span></span>
+<span><span><span>&lt;</span>head</span><span>></span></span>
+  <span><span><span>&lt;</span>meta</span> <span>http-equiv</span><span><span>=</span><span>"</span>Content-Type<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>text/html; charset=utf-8<span>"</span></span> <span>/></span></span>
+  <span><span><span>&lt;</span>title</span><span>></span></span>Zend Framework Default Application<span><span><span>&lt;/</span>title</span><span>></span></span>
+<span><span><span>&lt;/</span>head</span><span>></span></span>
+<span><span><span>&lt;</span>body</span><span>></span></span>
+  <span><span><span>&lt;</span>h1</span><span>></span></span>An error occurred<span><span><span>&lt;/</span>h1</span><span>></span></span>
+  <span><span><span>&lt;</span>h2</span><span>></span></span><span><span>&lt;?php</span> <span>echo</span> <span>$this</span><span>-></span><span>message</span> <span>?></span></span><span><span><span>&lt;/</span>h2</span><span>></span></span>
+ 
+  <span><span>&lt;?php</span> <span>if</span> <span>(</span><span>'development'</span> <span>==</span> <span>$this</span><span>-></span><span>env</span><span>)</span><span>:</span> <span>?></span></span>
+ 
+  <span><span><span>&lt;</span>h3</span><span>></span></span>Exception information:<span><span><span>&lt;/</span>h3</span><span>></span></span>
+  <span><span><span>&lt;</span>p</span><span>></span></span>
+      <span><span><span>&lt;</span>b</span><span>></span></span>Message:<span><span><span>&lt;/</span>b</span><span>></span></span> <span><span>&lt;?php</span> <span>echo</span> <span>$this</span><span>-></span><span>exception</span><span>-></span><span>getMessage</span><span>(</span><span>)</span> <span>?></span></span>
+  <span><span><span>&lt;/</span>p</span><span>></span></span>
+ 
+  <span><span><span>&lt;</span>h3</span><span>></span></span>Stack trace:<span><span><span>&lt;/</span>h3</span><span>></span></span>
+  <span><span><span>&lt;</span>pre</span><span>></span></span><span><span>&lt;?php</span> <span>echo</span> <span>$this</span><span>-></span><span>exception</span><span>-></span><span>getTraceAsString</span><span>(</span><span>)</span> <span>?></span></span>
+  <span><span><span>&lt;/</span>pre</span><span>></span></span>
+ 
+  <span><span><span>&lt;</span>h3</span><span>></span></span>Request Parameters:<span><span><span>&lt;/</span>h3</span><span>></span></span>
+  <span><span><span>&lt;</span>pre</span><span>></span></span><span><span>&lt;?php</span> <span>echo</span> <span>var_export</span><span>(</span><span>$this</span><span>-></span><span>request</span><span>-></span><span>getParams</span><span>(</span><span>)</span><span>,</span> <span>1</span><span>)</span> <span>?></span></span>
+  <span><span><span>&lt;/</span>pre</span><span>></span></span>
+  <span><span>&lt;?php</span> <span>endif</span> <span>?></span></span>
+ 
+<span><span><span>&lt;/</span>body</span><span>></span></span>
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><h2 id="创建虚拟主机" tabindex="-1"> 创建虚拟主机</h2>
+<p>对于 quickstart 项目，我们把它放在 apache 服务器上运行。</p>
+<p>我们需要设置一个虚拟主机，这样就可以在浏览器中输入域名来访问我们的网站了。假设你已经配置好了 php+apache+mysql 运行环境，如果没有，请参考<a href="http://www.cnblogs.com/feifeifanye/p/6150551.html" target="_blank" rel="noopener noreferrer">教程</a></p>
+<p>假设我们的项目所映射的域名是：quickstart.local。</p>
+<p>进入 apache 配置目录，创建配置文件：</p>
+<div><pre><code><span>cd</span> /etc/apache2/sites-available/
+<span>sudo</span> gedit quickstart.local.conf
+</code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>然后复制下面的内容到该配置文件，<strong>注意</strong>：项目路径需要替换成你自己的项目路径：</p>
+<div><pre><code><span><span><span>&lt;</span>VirtualHost</span> <span><span>*:</span>80</span><span>></span></span>
+	ServerName quickstart.local
+
+	ServerAdmin webmaster@localhost
+	DocumentRoot /home/xxx/demo/quickstart/public
+
+	&lt;Directory /home/xxx/demo/quickstart/public>
+	AllowOverride all
+	require all granted
+	<span><span><span>&lt;/</span>Directory</span><span>></span></span>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+<span><span><span>&lt;/</span>VirtualHost</span><span>></span></span>
+
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>保存该文件，并且启用该配置：<code>sudo a2ensite quickstart.local</code></p>
+<p>然后打开hosts文件：<code>sudo gedit /etc/hosts</code> 添加一行：<br>
+<code>127.0.0.1 quickstart.local</code></p>
+<p>最后重启一下 apache 服务器:<br>
+<code>sudo service apache2 restart</code></p>
+<p>到此为止，这个项目就创建成功并且可运行了。</p>
+<h2 id="检验成果" tabindex="-1"> 检验成果</h2>
+<p>现在就可以访问你的项目网站了，打开浏览器输入<code>http://quickstart.local</code>，就能看到欢迎页了。</p>
+<p>![[ddb946d216db6a8575bef69f77779568.png]]</p>
+<h3 id="可能遇到的问题" tabindex="-1"> 可能遇到的问题：</h3>
+<ol>
+<li>页面不显示：很有可能时项目目录的权限问题，使用 <code>chmod -R 777 /home/xxx/demo/quickstart</code> 试试看。</li>
+</ol>
+<h1 id="创建一个-layout" tabindex="-1"> 创建一个 Layout</h1>
+<p>你可能注意到，上面的 view scripts 不是完整的 html 页面，这是故意设计的。我们只想让 action 只返回 action 本身要输出的内容，而不是整个应用程序页面。</p>
+<p>现在来组成一个完整的 HTML 页面。我们使用一个全局的 layout 来作为网站统一的样式。</p>
+<p><strong>注：</strong> 下面的命令若无说明，默认是在当前项目根目录下执行的。</p>
+<p>开始使用 <code>Zend_Layout</code>，首先让 bootstrap 来加载 Layout 资源。通过下面的命令可实现：</p>
+<div><pre><code><span>$zf</span> <span>enable</span> layout
+<span># Layouts have been enabled, and a default layout created at</span>
+<span># application/layouts/scripts/layout.phtml</span>
+<span># A layout entry has been added to the application config file.</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>此时，<em>application/configs/application.ini</em> 内容自动更新了：</p>
+<div><pre><code><span>; application/configs/application.ini</span>
+ 
+<span>; Add to [production] section:</span>
+<span>resources.layout.layoutPath</span> <span>=</span> <span>APPLICATION_PATH "/layouts/scripts"</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>这个指令告诉应用程序去 <em>application/layouts/scripts</em> 去寻找 layout。</p>
+<p>我们还要启用 XHTML DocType 声明，为此，在 bootstrap 中加载该资源。在 bootstrap中添加资源的最简单的方法就是创建一个以init开头的方法。此时，我们使用 _initDoctype() 方法来初始化 doctype：</p>
+<div><pre><code><span>// application/Bootstrap.php</span>
+ 
+<span>class</span> <span>Bootstrap</span> <span>extends</span> <span>Zend_Application_Bootstrap_Bootstrap</span>
+<span>{</span>
+    <span>protected</span> <span>function</span> <span>_initDoctype</span><span>(</span><span>)</span>
+    <span>{</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>有了这个方法，还需要让 view 使用正确的 doctype，但是 view 从哪里来？最简单的方式就是初始化 View 资源；有了它，就可以把 view 对象放入 bootstrap 并使用它。</p>
+<p>添加下行到 aplication/configs/application.ini 来创建 view 资源:</p>
+<div><pre><code><span>; application/configs/application.ini</span>
+ 
+<span>; Add to [production] section:</span>
+<span>resources.view[]</span> <span>=</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>然后再来充实一下 _initDoctype() 方法。</p>
+<div><pre><code><span>// application/Bootstrap.php</span>
+ 
+<span>class</span> <span>Bootstrap</span> <span>extends</span> <span>Zend_Application_Bootstrap_Bootstrap</span>
+<span>{</span>
+    <span>protected</span> <span>function</span> <span>_initDoctype</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>$this</span><span>-></span><span>bootstrap</span><span>(</span><span>'view'</span><span>)</span><span>;</span>
+        <span>$view</span> <span>=</span> <span>$this</span><span>-></span><span>getResource</span><span>(</span><span>'view'</span><span>)</span><span>;</span>
+        <span>$view</span><span>-></span><span>doctype</span><span>(</span><span>'XHTML1_STRICT'</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>然后，创建全局的 layout：</p>
+<div><pre><code><span>&lt;!-- application/layouts/scripts/layout.phtml --></span>
+<span>&lt;?php echo $this->doctype() ?></span>
+<span><span><span>&lt;</span>html</span> <span>xmlns</span><span><span>=</span><span>"</span>http://www.w3.org/1999/xhtml<span>"</span></span><span>></span></span>
+<span><span><span>&lt;</span>head</span><span>></span></span>
+  <span><span><span>&lt;</span>meta</span> <span>http-equiv</span><span><span>=</span><span>"</span>Content-Type<span>"</span></span> <span>content</span><span><span>=</span><span>"</span>text/html; charset=utf-8<span>"</span></span> <span>/></span></span>
+  <span><span><span>&lt;</span>title</span><span>></span></span>Zend Framework Quickstart Application<span><span><span>&lt;/</span>title</span><span>></span></span>
+  <span>&lt;?php echo $this->headLink()->appendStylesheet('/css/global.css') ?></span>
+<span><span><span>&lt;/</span>head</span><span>></span></span>
+<span><span><span>&lt;</span>body</span><span>></span></span>
+<span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>header<span>"</span></span> <span><span>style</span><span><span>=</span><span>"</span><span><span>background-color</span><span>:</span> #EEEEEE<span>;</span> <span>height</span><span>:</span> 30px<span>;</span></span><span>"</span></span></span><span>></span></span>
+    <span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>header-logo<span>"</span></span> <span><span>style</span><span><span>=</span><span>"</span><span><span>float</span><span>:</span> left</span><span>"</span></span></span><span>></span></span>
+        <span><span><span>&lt;</span>b</span><span>></span></span>ZF Quickstart Application<span><span><span>&lt;/</span>b</span><span>></span></span>
+    <span><span><span>&lt;/</span>div</span><span>></span></span>
+    <span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>header-navigation<span>"</span></span> <span><span>style</span><span><span>=</span><span>"</span><span><span>float</span><span>:</span> right</span><span>"</span></span></span><span>></span></span>
+        <span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span>&lt;?php echo $this->url(
+            array('controller'=>'guestbook'),
+            'default',
+            true) ?><span>"</span></span><span>></span></span>Guestbook<span><span><span>&lt;/</span>a</span><span>></span></span>
+    <span><span><span>&lt;/</span>div</span><span>></span></span>
+<span><span><span>&lt;/</span>div</span><span>></span></span>
+ 
+<span>&lt;?php echo $this->layout()->content ?></span>
+ 
+<span><span><span>&lt;/</span>body</span><span>></span></span>
+<span><span><span>&lt;/</span>html</span><span>></span></span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>使用<code>headLink()</code>来生成<code>&lt;link&gt;</code>元素。</p>
+<p>现在再打开浏览器并查看源代码，应该能看到 XHTML头部，<code>&lt;head&gt; &lt;title&gt; &lt;body&gt;</code>等部分。</p>
+<p>![[e5818d0598d7b4a59056aa513432a220.png]]
+![[37058def8908094e831a5bc03d8f92cb.png]]</p>
+<h2 id="创建一个-model-和-database-table" tabindex="-1"> 创建一个 Model 和 Database Table</h2>
+<p>现在考虑一下guestbook的组成，它包含一些记录，每个记录由注释，时间戳，email地址等组成。我们把它存在数据库里，并有一个唯一id。我们希望能保存、获取所有记录。</p>
+<p>因此，一个简单的 guestbook 模型 API 就像下面这样：</p>
+<div><pre><code><span>// application/models/Guestbook.php</span>
+ 
+<span>class</span> <span>Application_Model_Guestbook</span>
+<span>{</span>
+    <span>protected</span> <span>$_comment</span><span>;</span>
+    <span>protected</span> <span>$_created</span><span>;</span>
+    <span>protected</span> <span>$_email</span><span>;</span>
+    <span>protected</span> <span>$_id</span><span>;</span>
+ 
+    <span>public</span> <span>function</span> <span>__set</span><span>(</span><span>$name</span><span>,</span> <span>$value</span><span>)</span><span>;</span>
+    <span>public</span> <span>function</span> <span>__get</span><span>(</span><span>$name</span><span>)</span><span>;</span>
+ 
+    <span>public</span> <span>function</span> <span>setComment</span><span>(</span><span>$text</span><span>)</span><span>;</span>
+    <span>public</span> <span>function</span> <span>getComment</span><span>(</span><span>)</span><span>;</span>
+ 
+    <span>public</span> <span>function</span> <span>setEmail</span><span>(</span><span>$email</span><span>)</span><span>;</span>
+    <span>public</span> <span>function</span> <span>getEmail</span><span>(</span><span>)</span><span>;</span>
+ 
+    <span>public</span> <span>function</span> <span>setCreated</span><span>(</span><span>$ts</span><span>)</span><span>;</span>
+    <span>public</span> <span>function</span> <span>getCreated</span><span>(</span><span>)</span><span>;</span>
+ 
+    <span>public</span> <span>function</span> <span>setId</span><span>(</span><span>$id</span><span>)</span><span>;</span>
+    <span>public</span> <span>function</span> <span>getId</span><span>(</span><span>)</span><span>;</span>
+<span>}</span>
+ 
+<span>class</span> <span>Application_Model_GuestbookMapper</span>
+<span>{</span>
+    <span>public</span> <span>function</span> <span>save</span><span>(</span><span>Application_Model_Guestbook</span> <span>$guestbook</span><span>)</span><span>;</span>
+    <span>public</span> <span>function</span> <span>find</span><span>(</span><span>$id</span><span>)</span><span>;</span>
+    <span>public</span> <span>function</span> <span>fetchAll</span><span>(</span><span>)</span><span>;</span>
+<span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>下面，我们可以开始思考如何设置数据库了。</p>
+<p>首先要初始化 Db 资源。使用 zf configure db-adapter 命令：</p>
+<div><pre><code>zf configure db-adapter <span>"adapter=Pdo_MySql&amp;host=localhost&amp;username=root&amp;password=&amp;dbname=guestbook"</span> production
+
+zf configure db-adapter <span>"adapter=Pdo_MySql&amp;host=localhost&amp;username=root&amp;password=&amp;dbname=guestbook-test"</span> testing
+
+zf configure db-adapter <span>"adapter=Pdo_MySql&amp;host=localhost&amp;username=root&amp;password=&amp;dbname=guestbook-dev"</span> development
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>如果成功执行，那么在 <em>application/configs/application.ini</em> 中就能看到新增的几行配置：</p>
+<div><pre><code>//application/configs/application.ini
+
+<span>resources.db.adapter</span> <span>=</span> <span>"<span>Pdo_MySql</span>"</span>
+<span>resources.db.params.host</span> <span>=</span> <span>"<span>localhost</span>"</span>
+<span>resources.db.params.username</span> <span>=</span> <span>"<span>root</span>"</span>
+<span>resources.db.params.password</span> <span>=</span> <span>""</span>
+<span>resources.db.params.dbname</span> <span>=</span><span>"<span>guestbook</span>"</span> 
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>**注：**要把数据库密码设置成你自己的。</p>
+<p>然后创建数据库，打开 phpMyadmin，创建数据库 <strong>guestbook</strong>，输入下面SQL语句并执行：</p>
+<div><pre><code><span>CREATE</span> <span>TABLE</span> <span>IF</span> <span>NOT</span> <span>EXISTS</span> <span><span>`</span>guestbook<span>`</span></span> <span>(</span>
+    <span><span>`</span>id<span>`</span></span> <span>int</span><span>(</span><span>11</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>AUTO_INCREMENT</span><span>,</span>
+    <span><span>`</span>email<span>`</span></span> <span>varchar</span><span>(</span><span>32</span><span>)</span> <span>NOT</span> <span>NULL</span> <span>DEFAULT</span> <span>'noemail@test.com'</span><span>,</span>
+    <span><span>`</span>comment<span>`</span></span> <span>varchar</span><span>(</span><span>200</span><span>)</span> <span>NOT</span> <span>NULL</span><span>,</span>
+    <span><span>`</span>created<span>`</span></span> <span>timestamp</span> <span>NOT</span> <span>NULL</span> <span>DEFAULT</span> <span>CURRENT_TIMESTAMP</span><span>,</span>
+    <span>PRIMARY</span> <span>KEY</span> <span>(</span><span><span>`</span>id<span>`</span></span><span>)</span>
+<span>)</span> <span>ENGINE</span><span>=</span>MyISAM  <span>DEFAULT</span> <span>CHARSET</span><span>=</span>latin1 <span>AUTO_INCREMENT</span><span>=</span><span>1</span> <span>;</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>接下来我们使用 <a href="http://martinfowler.com/eaaCatalog/tableDataGateway.html" target="_blank" rel="noopener noreferrer">Table Data Gateway</a> 机制来连接数据源。<code>Zend_Db_Table</code> 提供了这个功能。</p>
+<p>首先创建一个 <code>Zend_Db_Table</code> 类：</p>
+<div><pre><code>$ zf create db-table Guestbook guestbook
+</code></pre><div aria-hidden="true"><div></div></div></div><p>查看项目结构，发现多了一个 <em>application/models/DbTable/</em> 目录，里面有一个 Guestbook.php 文件。其内容如下：</p>
+<div><pre><code><span>// application/models/DbTable/Guestbook.php</span>
+ 
+<span>/**
+* This is the DbTable class for the guestbook table.
+*/</span>
+<span>class</span> <span>Application_Model_DbTable_Guestbook</span> <span>extends</span> <span>Zend_Db_Table_Abstract</span>
+<span>{</span>
+    <span>/** Table name */</span>
+    <span>protected</span> <span>$_name</span>    <span>=</span> <span>'guestbook'</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p><strong>注意</strong> <code>Application_Model_DbTable</code> 类前缀，它对应 <em>application/models/DbTable</em> 目录。</p>
+<p>然后创建一个 <a href="http://martinfowler.com/eaaCatalog/dataMapper.html" target="_blank" rel="noopener noreferrer">Data Mapper</a>。Data Mapper 映射对象到数据库。本例中，它将映射 model 到数据源。</p>
+<div><pre><code>$ zf create model GuestbookMapper
+</code></pre><div aria-hidden="true"><div></div></div></div><p>然后打开 application/models/GuestbookMapper.php 并输入以下内容：</p>
+<div><pre><code><span>// application/models/GuestbookMapper.php</span>
+ 
+<span>class</span> <span>Application_Model_GuestbookMapper</span>
+<span>{</span>
+    <span>protected</span> <span>$_dbTable</span><span>;</span>
+ 
+    <span>public</span> <span>function</span> <span>setDbTable</span><span>(</span><span>$dbTable</span><span>)</span>
+    <span>{</span>
+        <span>if</span> <span>(</span><span>is_string</span><span>(</span><span>$dbTable</span><span>)</span><span>)</span> <span>{</span>
+            <span>$dbTable</span> <span>=</span> <span>new</span> <span>$dbTable</span><span>(</span><span>)</span><span>;</span>
+        <span>}</span>
+        <span>if</span> <span>(</span><span>!</span><span>$dbTable</span> <span>instanceof</span> <span>Zend_Db_Table_Abstract</span><span>)</span> <span>{</span>
+            <span>throw</span> <span>new</span> <span>Exception</span><span>(</span><span>'Invalid table data gateway provided'</span><span>)</span><span>;</span>
+        <span>}</span>
+        <span>$this</span><span>-></span><span>_dbTable</span> <span>=</span> <span>$dbTable</span><span>;</span>
+        <span>return</span> <span>$this</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>getDbTable</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>if</span> <span>(</span><span>null</span> <span>===</span> <span>$this</span><span>-></span><span>_dbTable</span><span>)</span> <span>{</span>
+            <span>$this</span><span>-></span><span>setDbTable</span><span>(</span><span>'Application_Model_DbTable_Guestbook'</span><span>)</span><span>;</span>
+        <span>}</span>
+        <span>return</span> <span>$this</span><span>-></span><span>_dbTable</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>save</span><span>(</span><span>Application_Model_Guestbook</span> <span>$guestbook</span><span>)</span>
+    <span>{</span>
+        <span>$data</span> <span>=</span> <span>array</span><span>(</span>
+            <span>'email'</span>   <span>=></span> <span>$guestbook</span><span>-></span><span>getEmail</span><span>(</span><span>)</span><span>,</span>
+            <span>'comment'</span> <span>=></span> <span>$guestbook</span><span>-></span><span>getComment</span><span>(</span><span>)</span><span>,</span>
+            <span>'created'</span> <span>=></span> <span>date</span><span>(</span><span>'Y-m-d H:i:s'</span><span>)</span><span>,</span>
+        <span>)</span><span>;</span>
+ 
+        <span>if</span> <span>(</span><span>null</span> <span>===</span> <span>(</span><span>$id</span> <span>=</span> <span>$guestbook</span><span>-></span><span>getId</span><span>(</span><span>)</span><span>)</span><span>)</span> <span>{</span>
+            <span>unset</span><span>(</span><span>$data</span><span>[</span><span>'id'</span><span>]</span><span>)</span><span>;</span>
+            <span>$this</span><span>-></span><span>getDbTable</span><span>(</span><span>)</span><span>-></span><span>insert</span><span>(</span><span>$data</span><span>)</span><span>;</span>
+        <span>}</span> <span>else</span> <span>{</span>
+            <span>$this</span><span>-></span><span>getDbTable</span><span>(</span><span>)</span><span>-></span><span>update</span><span>(</span><span>$data</span><span>,</span> <span>array</span><span>(</span><span>'id = ?'</span> <span>=></span> <span>$id</span><span>)</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>find</span><span>(</span><span>$id</span><span>,</span> <span>Application_Model_Guestbook</span> <span>$guestbook</span><span>)</span>
+    <span>{</span>
+        <span>$result</span> <span>=</span> <span>$this</span><span>-></span><span>getDbTable</span><span>(</span><span>)</span><span>-></span><span>find</span><span>(</span><span>$id</span><span>)</span><span>;</span>
+        <span>if</span> <span>(</span><span>0</span> <span>==</span> <span>count</span><span>(</span><span>$result</span><span>)</span><span>)</span> <span>{</span>
+            <span>return</span><span>;</span>
+        <span>}</span>
+        <span>$row</span> <span>=</span> <span>$result</span><span>-></span><span>current</span><span>(</span><span>)</span><span>;</span>
+        <span>$guestbook</span><span>-></span><span>setId</span><span>(</span><span>$row</span><span>-></span><span>id</span><span>)</span>
+                  <span>-></span><span>setEmail</span><span>(</span><span>$row</span><span>-></span><span>email</span><span>)</span>
+                  <span>-></span><span>setComment</span><span>(</span><span>$row</span><span>-></span><span>comment</span><span>)</span>
+                  <span>-></span><span>setCreated</span><span>(</span><span>$row</span><span>-></span><span>created</span><span>)</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>fetchAll</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>$resultSet</span> <span>=</span> <span>$this</span><span>-></span><span>getDbTable</span><span>(</span><span>)</span><span>-></span><span>fetchAll</span><span>(</span><span>)</span><span>;</span>
+        <span>$entries</span>   <span>=</span> <span>array</span><span>(</span><span>)</span><span>;</span>
+        <span>foreach</span> <span>(</span><span>$resultSet</span> <span>as</span> <span>$row</span><span>)</span> <span>{</span>
+            <span>$entry</span> <span>=</span> <span>new</span> <span>Application_Model_Guestbook</span><span>(</span><span>)</span><span>;</span>
+            <span>$entry</span><span>-></span><span>setId</span><span>(</span><span>$row</span><span>-></span><span>id</span><span>)</span>
+                  <span>-></span><span>setEmail</span><span>(</span><span>$row</span><span>-></span><span>email</span><span>)</span>
+                  <span>-></span><span>setComment</span><span>(</span><span>$row</span><span>-></span><span>comment</span><span>)</span>
+                  <span>-></span><span>setCreated</span><span>(</span><span>$row</span><span>-></span><span>created</span><span>)</span><span>;</span>
+            <span>$entries</span><span>[</span><span>]</span> <span>=</span> <span>$entry</span><span>;</span>
+        <span>}</span>
+        <span>return</span> <span>$entries</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>现在，创建 model 类，仍然使用 zf 命令：</p>
+<div><pre><code>$ zf create model Guestbook
+</code></pre><div aria-hidden="true"><div></div></div></div><p>打开刚刚创建的模型类： application/models/Guestbook.php 并添加以下代码：</p>
+<div><pre><code><span>// application/models/Guestbook.php</span>
+ 
+<span>class</span> <span>Application_Model_Guestbook</span>
+<span>{</span>
+    <span>protected</span> <span>$_comment</span><span>;</span>
+    <span>protected</span> <span>$_created</span><span>;</span>
+    <span>protected</span> <span>$_email</span><span>;</span>
+    <span>protected</span> <span>$_id</span><span>;</span>
+ 
+    <span>public</span> <span>function</span> <span>__construct</span><span>(</span><span>array</span> <span>$options</span> <span>=</span> <span>null</span><span>)</span>
+    <span>{</span>
+        <span>if</span> <span>(</span><span>is_array</span><span>(</span><span>$options</span><span>)</span><span>)</span> <span>{</span>
+            <span>$this</span><span>-></span><span>setOptions</span><span>(</span><span>$options</span><span>)</span><span>;</span>
+        <span>}</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>__set</span><span>(</span><span>$name</span><span>,</span> <span>$value</span><span>)</span>
+    <span>{</span>
+        <span>$method</span> <span>=</span> <span>'set'</span> <span>.</span> <span>$name</span><span>;</span>
+        <span>if</span> <span>(</span><span>(</span><span>'mapper'</span> <span>==</span> <span>$name</span><span>)</span> <span>||</span> <span>!</span><span>method_exists</span><span>(</span><span>$this</span><span>,</span> <span>$method</span><span>)</span><span>)</span> <span>{</span>
+            <span>throw</span> <span>new</span> <span>Exception</span><span>(</span><span>'Invalid guestbook property'</span><span>)</span><span>;</span>
+        <span>}</span>
+        <span>$this</span><span>-></span><span>$method</span><span>(</span><span>$value</span><span>)</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>__get</span><span>(</span><span>$name</span><span>)</span>
+    <span>{</span>
+        <span>$method</span> <span>=</span> <span>'get'</span> <span>.</span> <span>$name</span><span>;</span>
+        <span>if</span> <span>(</span><span>(</span><span>'mapper'</span> <span>==</span> <span>$name</span><span>)</span> <span>||</span> <span>!</span><span>method_exists</span><span>(</span><span>$this</span><span>,</span> <span>$method</span><span>)</span><span>)</span> <span>{</span>
+            <span>throw</span> <span>new</span> <span>Exception</span><span>(</span><span>'Invalid guestbook property'</span><span>)</span><span>;</span>
+        <span>}</span>
+        <span>return</span> <span>$this</span><span>-></span><span>$method</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>setOptions</span><span>(</span><span>array</span> <span>$options</span><span>)</span>
+    <span>{</span>
+        <span>$methods</span> <span>=</span> <span>get_class_methods</span><span>(</span><span>$this</span><span>)</span><span>;</span>
+        <span>foreach</span> <span>(</span><span>$options</span> <span>as</span> <span>$key</span> <span>=></span> <span>$value</span><span>)</span> <span>{</span>
+            <span>$method</span> <span>=</span> <span>'set'</span> <span>.</span> <span>ucfirst</span><span>(</span><span>$key</span><span>)</span><span>;</span>
+            <span>if</span> <span>(</span><span>in_array</span><span>(</span><span>$method</span><span>,</span> <span>$methods</span><span>)</span><span>)</span> <span>{</span>
+                <span>$this</span><span>-></span><span>$method</span><span>(</span><span>$value</span><span>)</span><span>;</span>
+            <span>}</span>
+        <span>}</span>
+        <span>return</span> <span>$this</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>setComment</span><span>(</span><span>$text</span><span>)</span>
+    <span>{</span>
+        <span>$this</span><span>-></span><span>_comment</span> <span>=</span> <span>(</span><span>string</span><span>)</span> <span>$text</span><span>;</span>
+        <span>return</span> <span>$this</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>getComment</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>return</span> <span>$this</span><span>-></span><span>_comment</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>setEmail</span><span>(</span><span>$email</span><span>)</span>
+    <span>{</span>
+        <span>$this</span><span>-></span><span>_email</span> <span>=</span> <span>(</span><span>string</span><span>)</span> <span>$email</span><span>;</span>
+        <span>return</span> <span>$this</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>getEmail</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>return</span> <span>$this</span><span>-></span><span>_email</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>setCreated</span><span>(</span><span>$ts</span><span>)</span>
+    <span>{</span>
+        <span>$this</span><span>-></span><span>_created</span> <span>=</span> <span>$ts</span><span>;</span>
+        <span>return</span> <span>$this</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>getCreated</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>return</span> <span>$this</span><span>-></span><span>_created</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>setId</span><span>(</span><span>$id</span><span>)</span>
+    <span>{</span>
+        <span>$this</span><span>-></span><span>_id</span> <span>=</span> <span>(</span><span>int</span><span>)</span> <span>$id</span><span>;</span>
+        <span>return</span> <span>$this</span><span>;</span>
+    <span>}</span>
+ 
+    <span>public</span> <span>function</span> <span>getId</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>return</span> <span>$this</span><span>-></span><span>_id</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>最后，我们创建一个 guestbook controller 查询并显示数据库中的结果：</p>
+<div><pre><code>$ zf create controller Guestbook
+</code></pre><div aria-hidden="true"><div></div></div></div><p>这将创建 <em>application/controllers/GuestbookController.php</em>，它有一个 <code>IndexAction</code> 方法，同时，在 <em>application/views/scripts/guestbook</em> 目录中创建了一个 index.phtml 文件。</p>
+<p>打开 GuestbookController，在 IndexAction 中添加代码，显示所有的 guestbook 记录：</p>
+<div><pre><code><span>// application/controllers/GuestbookController.php</span>
+ 
+<span>class</span> <span>GuestbookController</span> <span>extends</span> <span>Zend_Controller_Action</span>
+<span>{</span>
+    <span>public</span> <span>function</span> <span>indexAction</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>$guestbook</span> <span>=</span> <span>new</span> <span>Application_Model_GuestbookMapper</span><span>(</span><span>)</span><span>;</span>
+        <span>$this</span><span>-></span><span>view</span><span>-></span><span>entries</span> <span>=</span> <span>$guestbook</span><span>-></span><span>fetchAll</span><span>(</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>打开 <em>application/views/scripts/guestbook/index.phtml</em> 添加以下内容：</p>
+<div><pre><code><span>&lt;!-- application/views/scripts/guestbook/index.phtml --></span>
+ 
+<span><span><span>&lt;</span>p</span><span>></span></span><span><span><span>&lt;</span>a</span> <span>href</span><span><span>=</span><span>"</span><span><span>&lt;?php</span> <span>echo</span> <span>$this</span><span>-></span><span>url</span><span>(</span>
+    <span>array</span><span>(</span>
+        <span>'controller'</span> <span>=></span> <span>'guestbook'</span><span>,</span>
+        <span>'action'</span>     <span>=></span> <span>'sign'</span>
+    <span>)</span><span>,</span>
+    <span>'default'</span><span>,</span>
+    <span>true</span><span>)</span> <span>?></span></span><span>"</span></span><span>></span></span>Sign Our Guestbook<span><span><span>&lt;/</span>a</span><span>></span></span><span><span><span>&lt;/</span>p</span><span>></span></span>
+ 
+Guestbook Entries: <span><span><span>&lt;</span>br</span> <span>/></span></span>
+<span><span><span>&lt;</span>dl</span><span>></span></span>
+    <span><span>&lt;?php</span> <span>foreach</span> <span>(</span><span>$this</span><span>-></span><span>entries</span> <span>as</span> <span>$entry</span><span>)</span><span>:</span> <span>?></span></span>
+    <span><span><span>&lt;</span>dt</span><span>></span></span><span><span>&lt;?php</span> <span>echo</span> <span>$this</span><span>-></span><span>escape</span><span>(</span><span>$entry</span><span>-></span><span>email</span><span>)</span> <span>?></span></span><span><span><span>&lt;/</span>dt</span><span>></span></span>
+    <span><span><span>&lt;</span>dd</span><span>></span></span><span><span>&lt;?php</span> <span>echo</span> <span>$this</span><span>-></span><span>escape</span><span>(</span><span>$entry</span><span>-></span><span>comment</span><span>)</span> <span>?></span></span><span><span><span>&lt;/</span>dd</span><span>></span></span>
+    <span><span>&lt;?php</span> <span>endforeach</span> <span>?></span></span>
+<span><span><span>&lt;/</span>dl</span><span>></span></span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>切换到浏览器，打开：<a href="http://guestbook.local/guestbook" target="_blank" rel="noopener noreferrer">http://guestbook.local/guestbook</a> ，你应该看到这些内容：
+![[763079256584fea45654c58d5496433e.png]]</p>
+<p>发现没有数据，那就打开 phpMyadmin，插入一些数据再看看，复制下面的sql语句到phpmyadmin并执行：</p>
+<div><pre><code><span>INSERT</span> <span>INTO</span> <span><span>`</span>guestbook<span>`</span></span><span>.</span><span><span>`</span>guestbook<span>`</span></span> <span>(</span><span><span>`</span>id<span>`</span></span><span>,</span> <span><span>`</span>email<span>`</span></span><span>,</span> <span><span>`</span>comment<span>`</span></span><span>,</span> <span><span>`</span>created<span>`</span></span><span>)</span> <span>VALUES</span> <span>(</span><span>NULL</span><span>,</span> <span>'noemail@qq.com'</span><span>,</span> <span>'good'</span><span>,</span> <span>CURRENT_TIMESTAMP</span><span>)</span><span>,</span>
+<span>(</span><span>NULL</span><span>,</span> <span>'noemail2@qq.com'</span><span>,</span> <span>'good book'</span><span>,</span> <span>CURRENT_TIMESTAMP</span><span>)</span><span>,</span>
+<span>(</span><span>NULL</span><span>,</span> <span>'noemail3@qq.com'</span><span>,</span> <span>'good book ok'</span><span>,</span> <span>CURRENT_TIMESTAMP</span><span>)</span><span>;</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>刷新浏览器，结果如图所示，成功地从数据库读取数据并显示在页面上：
+![[52e35508b701d038a5aa6355d79aceeb.png]]</p>
+<h2 id="创建-form" tabindex="-1"> 创建 Form</h2>
+<p>为了让 guestbook 更有用一些，我们需要一个表单来提交新的评论项。</p>
+<p>首先，创建一个 form 类：</p>
+<div><pre><code>$ zf create form Guestbook
+</code></pre><div aria-hidden="true"><div></div></div></div><p>打开刚创建的 form 类 *application/forms/Guestbook.php *，添加下列代码：</p>
+<div><pre><code><span>// application/forms/Guestbook.php</span>
+ 
+<span>class</span> <span>Application_Form_Guestbook</span> <span>extends</span> <span>Zend_Form</span>
+<span>{</span>
+    <span>public</span> <span>function</span> <span>init</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>// Set the method for the display form to POST</span>
+        <span>$this</span><span>-></span><span>setMethod</span><span>(</span><span>'post'</span><span>)</span><span>;</span>
+ 
+        <span>// Add an email element</span>
+        <span>$this</span><span>-></span><span>addElement</span><span>(</span><span>'text'</span><span>,</span> <span>'email'</span><span>,</span> <span>array</span><span>(</span>
+            <span>'label'</span>      <span>=></span> <span>'Your email address:'</span><span>,</span>
+            <span>'required'</span>   <span>=></span> <span>true</span><span>,</span>
+            <span>'filters'</span>    <span>=></span> <span>array</span><span>(</span><span>'StringTrim'</span><span>)</span><span>,</span>
+            <span>'validators'</span> <span>=></span> <span>array</span><span>(</span>
+                <span>'EmailAddress'</span><span>,</span>
+            <span>)</span>
+        <span>)</span><span>)</span><span>;</span>
+ 
+        <span>// Add the comment element</span>
+        <span>$this</span><span>-></span><span>addElement</span><span>(</span><span>'textarea'</span><span>,</span> <span>'comment'</span><span>,</span> <span>array</span><span>(</span>
+            <span>'label'</span>      <span>=></span> <span>'Please Comment:'</span><span>,</span>
+            <span>'required'</span>   <span>=></span> <span>true</span><span>,</span>
+            <span>'validators'</span> <span>=></span> <span>array</span><span>(</span>
+                <span>array</span><span>(</span><span>'validator'</span> <span>=></span> <span>'StringLength'</span><span>,</span> <span>'options'</span> <span>=></span> <span>array</span><span>(</span><span>0</span><span>,</span> <span>20</span><span>)</span><span>)</span>
+                <span>)</span>
+        <span>)</span><span>)</span><span>;</span>
+ 
+        <span>// Add a captcha</span>
+        <span>$this</span><span>-></span><span>addElement</span><span>(</span><span>'captcha'</span><span>,</span> <span>'captcha'</span><span>,</span> <span>array</span><span>(</span>
+            <span>'label'</span>      <span>=></span> <span>'Please enter the 5 letters displayed below:'</span><span>,</span>
+            <span>'required'</span>   <span>=></span> <span>true</span><span>,</span>
+            <span>'captcha'</span>    <span>=></span> <span>array</span><span>(</span>
+                <span>'captcha'</span> <span>=></span> <span>'Figlet'</span><span>,</span>
+                <span>'wordLen'</span> <span>=></span> <span>5</span><span>,</span>
+                <span>'timeout'</span> <span>=></span> <span>300</span>
+            <span>)</span>
+        <span>)</span><span>)</span><span>;</span>
+ 
+        <span>// Add the submit button</span>
+        <span>$this</span><span>-></span><span>addElement</span><span>(</span><span>'submit'</span><span>,</span> <span>'submit'</span><span>,</span> <span>array</span><span>(</span>
+            <span>'ignore'</span>   <span>=></span> <span>true</span><span>,</span>
+            <span>'label'</span>    <span>=></span> <span>'Sign Guestbook'</span><span>,</span>
+        <span>)</span><span>)</span><span>;</span>
+ 
+        <span>// And finally add some CSRF protection</span>
+        <span>$this</span><span>-></span><span>addElement</span><span>(</span><span>'hash'</span><span>,</span> <span>'csrf'</span><span>,</span> <span>array</span><span>(</span>
+            <span>'ignore'</span> <span>=></span> <span>true</span><span>,</span>
+        <span>)</span><span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>上面代码定义了五个元素：email地址，评论输入框，验证码，提交按钮和CSRF保护字段。</p>
+<p>下一步，添加 <code>signAction</code> 到 <code>GuestbookController</code>，它用于处理表单提交页面。使用 zf 命令创建：</p>
+<div><pre><code>$ zf create action sign Guestbook
+</code></pre><div aria-hidden="true"><div></div></div></div><p>创建了 signAction 和相应的 view script.</p>
+<p>然后添加一些代码到 signAction，首先检查是否有POST或GET请求，然后若没有就简单地显示表单，若有，则验证提交的数据，并保存到数据库中</p>
+<div><pre><code><span>// application/controllers/GuestbookController.php</span>
+ 
+<span>class</span> <span>GuestbookController</span> <span>extends</span> <span>Zend_Controller_Action</span>
+<span>{</span>
+    <span>// snipping indexAction()...</span>
+ 
+    <span>public</span> <span>function</span> <span>signAction</span><span>(</span><span>)</span>
+    <span>{</span>
+        <span>$request</span> <span>=</span> <span>$this</span><span>-></span><span>getRequest</span><span>(</span><span>)</span><span>;</span>
+        <span>$form</span>    <span>=</span> <span>new</span> <span>Application_Form_Guestbook</span><span>(</span><span>)</span><span>;</span>
+ 
+        <span>if</span> <span>(</span><span>$this</span><span>-></span><span>getRequest</span><span>(</span><span>)</span><span>-></span><span>isPost</span><span>(</span><span>)</span><span>)</span> <span>{</span>
+            <span>if</span> <span>(</span><span>$form</span><span>-></span><span>isValid</span><span>(</span><span>$request</span><span>-></span><span>getPost</span><span>(</span><span>)</span><span>)</span><span>)</span> <span>{</span>
+                <span>$comment</span> <span>=</span> <span>new</span> <span>Application_Model_Guestbook</span><span>(</span><span>$form</span><span>-></span><span>getValues</span><span>(</span><span>)</span><span>)</span><span>;</span>
+                <span>$mapper</span>  <span>=</span> <span>new</span> <span>Application_Model_GuestbookMapper</span><span>(</span><span>)</span><span>;</span>
+                <span>$mapper</span><span>-></span><span>save</span><span>(</span><span>$comment</span><span>)</span><span>;</span>
+                <span>return</span> <span>$this</span><span>-></span><span>_helper</span><span>-></span><span>redirector</span><span>(</span><span>'index'</span><span>)</span><span>;</span>
+            <span>}</span>
+        <span>}</span>
+ 
+        <span>$this</span><span>-></span><span>view</span><span>-></span><span>form</span> <span>=</span> <span>$form</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>当然，还需要编辑一下 view <em>application/views/scripts/guestbook/sign.phtml</em></p>
+<div><pre><code><span>&lt;!-- application/views/scripts/guestbook/sign.phtml --></span>
+ 
+Please use the form below to sign our guestbook!
+ 
+<span><span>&lt;?php</span>
+<span>$this</span><span>-></span><span>form</span><span>-></span><span>setAction</span><span>(</span><span>$this</span><span>-></span><span>url</span><span>(</span><span>)</span><span>)</span><span>;</span>
+<span>echo</span> <span>$this</span><span>-></span><span>form</span><span>;</span>
+</span></code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><h2 id="检查效果" tabindex="-1"> 检查效果</h2>
+<p>现在再打开浏览器：<a href="http://quickstart.local/guestbook/sign" target="_blank" rel="noopener noreferrer">http://quickstart.local/guestbook/sign</a> 看看，效果如下：
+![[5ec4048767b8ad90747a7f4e6dbeef6c.png]]</p>
+<p>填写好表单点击提交，就能看到列表已经更新了：
+![[3c45655730e74b79e32a272715038f96.png]]</p>
+<p><strong>注：</strong> 上面的验证码部分辨认很困难，其实只要复制一下粘贴到txt文档中就能看清楚了。</p>
+<h2 id="恭喜你" tabindex="-1"> 恭喜你！</h2>
+<p>你已经成功地使用 Zend Framework 的常用功能建立了一个简单的应用程序。Zend Framework 内置了很多组件，你可以直接用在你的项目中，这些组件包括 web services，搜索，PDF读取和创建，身份认证等等。可以在 <a href="https://framework.zend.com/manual/1.12/en/reference.html" target="_blank" rel="noopener noreferrer">文档参考</a> 中找到更多相关的技术细节。</p>
+<blockquote>
+<p>英文原文链接：<a href="https://framework.zend.com/manual/1.12/en/learning.html" target="_blank" rel="noopener noreferrer">https://framework.zend.com/manual/1.12/en/learning.html</a></p>
+</blockquote>
+]]></content:encoded>
+    </item>
     <item>
       <title>Query error：Duplicate entry &amp;apos;XXXXXXXXXXXXXXXX&amp;apos; for key &amp;apos;uniq_order_id&amp;apos;</title>
       <link>https://newzone.top/_posts/2022-05-24-query-error-duplicate-entry-for-key.html</link>
