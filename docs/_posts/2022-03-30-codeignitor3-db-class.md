@@ -1,7 +1,6 @@
 ---
 title: CodeIgnitor 3.0.x 之 db 类实现机制
 date: 2022-03-30
-code: true
 ---
 
 - Codeignitor 的 db 类的说明，锻炼一下文字表达能力

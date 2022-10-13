@@ -1,7 +1,6 @@
 ---
 title: PHP session 和 cookie
 date: 2021-11-21
-code: true
 ---
 
 ## session 和 cookie 的区别（关系）

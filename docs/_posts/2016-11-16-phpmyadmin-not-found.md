@@ -1,7 +1,6 @@
 ---
 title: phpmyadmin not found
 date: 2016-11-16
-code: true
 ---
 
 在 ubuntu 14.04 中使用：

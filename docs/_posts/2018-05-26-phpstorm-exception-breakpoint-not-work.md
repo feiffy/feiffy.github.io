@@ -1,7 +1,6 @@
 ---
 title: Phpstorm 无法自动断点 Exception
 date: 2018-05-26
-code: true
 ---
 
 困扰了很久的问题了。

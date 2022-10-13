@@ -1,7 +1,6 @@
 ---
 title: Uncaught TypeError Cannot convert object to primitive value
 date: 2020-04-26
-code: true
 ---
 
 最近发现我的博客页面移动端上下拉菜单失效了，调试了一下，只要一点击下拉菜单就会报这个错误：

@@ -1,7 +1,6 @@
 ---
 title: 一文彻底解决Ubuntu上PHP的安装以及版本切换
 date: 2018-02-27
-code: true
 ---
 
 Ubuntu上官方的源，比如 Ubuntu14.04 默认源中的是 PHP5.6.x、Ubuntu16.04 默认源中的是 PHP7.0.x，那么如果想在 Ubuntu16.04 上安装 PHP7.1，PHP7.2，应该怎么办呢？

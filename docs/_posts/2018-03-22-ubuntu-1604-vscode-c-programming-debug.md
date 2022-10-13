@@ -1,7 +1,6 @@
 ---
 title: Ubuntu16.04 中 Vscode 如何断点调试C语言程序
 date: 2018-03-22
-code: true
 ---
 
 问题：环境是 Ubuntu16.04，如何使用 Vscode 断点调试C语言程序。

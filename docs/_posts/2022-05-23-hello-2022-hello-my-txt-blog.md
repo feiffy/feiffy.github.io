@@ -1,7 +1,6 @@
 ---
 title: Hello 2022, Hello my txt blog
 date: 2022-05-23
-code: true
 ---
 
 之前在 v2ex 上看到对于 txt blog 讨论的[帖子](https://www.v2ex.com/t/851940?p=2)，想到自己折腾了这么久，心也累。即使是纯前端生成的各种静态博客，也疲倦了，样式什么的，都不在意了。是时候回归原始了。

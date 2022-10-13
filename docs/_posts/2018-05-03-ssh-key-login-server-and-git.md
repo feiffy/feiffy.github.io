@@ -1,7 +1,6 @@
 ---
 title: 设置 SSH Key 登录服务器和 Git 服务器
 date: 2018-05-03
-code: true
 ---
 
 ## 设置 SSH Key 登录服务器

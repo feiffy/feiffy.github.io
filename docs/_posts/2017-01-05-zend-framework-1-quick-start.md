@@ -1,7 +1,6 @@
 ---
 title: Zend Framework 1 - Quick Start
 date: 2017-01-05
-code: true
 ---
 
 ## 创建 Zend 项目

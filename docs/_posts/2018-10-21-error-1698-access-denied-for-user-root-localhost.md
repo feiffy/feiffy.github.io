@@ -1,7 +1,6 @@
 ---
 title: ERROR 1698 (28000) Access denied for user 'root'@'localhost'
 date: 2018-10-21
-code: true
 ---
 
 在新版的 Ubuntu （如 16.04，18.04）中，安装好 MySQL 后直接用下面的命令连接总是会报错：

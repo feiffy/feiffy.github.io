@@ -1,7 +1,6 @@
 ---
 title: Ubuntu 16.04 LAMP server 指南 - 配置 Apache2.4,PHP7,和MariaDB（而不是MySQL）
 date: 2016-12-09
-code: true
 ---
 
 原文：[https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp/](https://www.howtoforge.com/tutorial/install-apache-with-php-and-mysql-on-ubuntu-16-04-lamp/)

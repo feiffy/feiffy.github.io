@@ -1,7 +1,6 @@
 ---
 title: ubuntu 中 apache 开启 rewrite 模块
 date: 2017-08-11
-code: true
 ---
 
 ubuntu14.04中安装好apache2.4之后默认rewrite模块是不开启的，项目public目录下的.htaccess文件就用不了，在浏览器中访问网页总是报500错误，原因就是这个。

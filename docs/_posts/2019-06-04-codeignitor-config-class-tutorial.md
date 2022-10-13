@@ -1,7 +1,6 @@
 ---
 title: CodeIgnitor 配置类的使用
 date: 2019-06-04
-code: true
 ---
 
 CI 的配置文件统一放在 `application/config/` 目录下面，框架有一个默认的主配置文件 `application/config/config.php`。其部分内容如下：

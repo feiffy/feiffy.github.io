@@ -1,7 +1,6 @@
 ---
 title: 理解 php new static
 date: 2018-08-11
-code: true
 ---
 
 今天在看 Laravel 的容器（Container）实现时，发现了这么一段突然不能理解的代码：

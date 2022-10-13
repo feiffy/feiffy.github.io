@@ -1,7 +1,6 @@
 ---
 title: Ubuntu 16.04 安装 Gnome 桌面环境
 date: 2018-04-05
-code: true
 ---
 
 Linux平台上面的GNOME桌面有两种：一种是GNOME Shell（即本教程所讲的内容），另一种是 GNOME Desktop 。两者的区别在于：GNOME Shell 仅仅只是一个桌面环境，只修改用户界面；而 GNOME Desktop，包含了 GNOME Shell 和很多 GNOME 环境下特定的应用程序、包等等。如果你是一个新手，并且不知道装哪个好，那么就按照这篇教程的步骤安装 GNOME Shell 吧。

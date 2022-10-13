@@ -1,7 +1,6 @@
 ---
 title: CodeIgnitor 3.0.x 之 Load 加载机制
 date: 2019-08-20
-code: true
 ---
 
 CI 框架中的 library 和很多内置的类都是通过 `CI_Loader` 这个类加载的，也就是 Controller 中常常出现的 `$this->load` 属性。那么它本身是如何被加载的。
