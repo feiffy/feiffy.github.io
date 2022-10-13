@@ -22,9 +22,9 @@ $ ssh-keygen
 scp ~/.ssh/id_rsa.pub <your username>@<your servername/ip>:
 ```
 
-**注意:末尾有一个：冒号！**，这个命令把公钥文件上传到了服务器 <your username>/home 目录下面。
+**注意:末尾有一个：冒号！**，这个命令把公钥文件上传到了服务器 `<your username>/home` 目录下面。
 
-下一步，使用该用户名登录服务器，检查 <code>~/.ssh</code> 目录是否存在，不存在则创建之：
+下一步，使用该用户名登录服务器，检查 `~/.ssh` 目录是否存在，不存在则创建之：
 
 ``` bash
 $ mkdir ~/.ssh
