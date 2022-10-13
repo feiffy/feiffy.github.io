@@ -6,10 +6,501 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 13 Oct 2022 06:20:46 GMT</pubDate>
-    <lastBuildDate>Thu, 13 Oct 2022 06:20:46 GMT</lastBuildDate>
+    <pubDate>Thu, 13 Oct 2022 07:54:19 GMT</pubDate>
+    <lastBuildDate>Thu, 13 Oct 2022 07:54:19 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <item>
+      <title>程序员厨艺养成记之从零准备篇</title>
+      <link>https://newzone.top/_posts/2019-08-17-programmers-cooking-skills-from-scratch.html</link>
+      <guid>https://newzone.top/_posts/2019-08-17-programmers-cooking-skills-from-scratch.html</guid>
+      <source url="https://newzone.top/rss.xml">程序员厨艺养成记之从零准备篇</source>
+      <pubDate>Sat, 17 Aug 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>上周因为杨紫去看了《中餐厅》这个节目，然后令我惊奇的是王俊凯竟然会做菜，还挺不错的样子。这两年来，附近的吃饭的地方都已经吃遍了，外卖也吃腻了，周末懒在家点外卖很容易就积累4、5个外卖盒子，垃圾太多。一直蠢蠢欲动的做饭心思，加上某人的刺激，我决定这周末开始研究做菜。租的房里除了水电气和燃气灶可以用，其他都没有，所以算是从零开始了。</p>
+<h2 id="准备" tabindex="-1"> 准备</h2>
+<p>首先，周末之前提前在苏宁易购上买了锅、刀、砧板、锅铲，这些是比较容易想到的，周末正好送到，详细清单如下：</p>
+<ul>
+<li>炊大皇砧板，￥15，砧板有点小了</li>
+<li>张小泉菜刀，￥48，</li>
+<li>爱仕达套装锅三件套：汤锅煎锅炒锅不粘，￥99，这个是真的超值
+总计：￥172</li>
+</ul>
+<h2 id="买菜" tabindex="-1"> 买菜</h2>
+<p>周六一早起来出来买菜，逛了两圈菜场，买了：</p>
+<ul>
+<li>西红柿</li>
+<li>土豆</li>
+<li>大白菜</li>
+<li>姜</li>
+<li>葱（送的）</li>
+<li>辣椒
+总计：￥30</li>
+</ul>
+<h2 id="超市" tabindex="-1"> 超市</h2>
+<p>然后去超市买了很多日用品和调料：</p>
+<ul>
+<li>金龙鱼油，￥34.9，这个已经算是比较小的了</li>
+<li>盐，￥2.3</li>
+<li>味精，￥9.6</li>
+<li>米，￥15，7斤左右</li>
+<li>酱油，￥7.2</li>
+<li>陈醋，￥8.3</li>
+<li>保鲜膜，￥9.9</li>
+<li>盘子*2，￥30.8</li>
+<li>碗，￥12.8
+总计：￥132</li>
+</ul>
+<p>其实菜不贵，不过那些贵的日用品也是长期用的，其实不亏。</p>
+<p>然后准备做饭了，但是电饭锅的电源线呢？？？这个旧的电饭锅是舍友之前带来的，电源线不见了。时间也已经中午，做饭肯定来不及了，所以就在外面随便吃点，然后去小米之家看看电饭煲吧，不再纠结了。</p>
+<h2 id="小米之家" tabindex="-1"> 小米之家</h2>
+<p>有个299的没货了，1.6L又太小，4L的用不着，所以就选了这个，为了下午能做上饭，一路拎回家，我也是醉了。</p>
+<ul>
+<li>米家 IH 电饭煲 3L，￥399</li>
+</ul>
+<h2 id="超市-1" tabindex="-1"> 超市</h2>
+<p>再次准备做饭之前，又检查了遍需要的东西，发现还有必需品没有，列了一个清单，一个个跑超市买，不是所有的东西超市都有，还好附近有三家超市：</p>
+<ul>
+<li>调料盒</li>
+<li>抹布</li>
+<li>保鲜盒，这个属于临时顺便买的，想着可能会用到</li>
+<li>鸡蛋，万能的食材啊，菜场忘记买了</li>
+<li>青椒，万能的食材啊，菜场也忘记买了</li>
+<li>削皮器，没这个土豆皮真拿你没办法</li>
+<li>挂钩，其实应该买一个可以挂一排的那种
+总计：￥48.4</li>
+</ul>
+<h2 id="超市-2" tabindex="-1"> 超市</h2>
+<p>今天早晨又去了趟超市，将昨天的缺失补了：</p>
+<ul>
+<li>蒜瓣，看了好多菜谱需要这个</li>
+<li>杏仁百合粥（早晨用）</li>
+<li>袋装酸豇豆，涪陵榨菜我拿了一包，后来又依依不舍地放下了，毕竟这种高端食材不是我能消费得起的。</li>
+<li>大的汤碗</li>
+<li>大的汤勺</li>
+<li>梨
+总计：￥70.8</li>
+</ul>
+<h2 id="其他" tabindex="-1"> 其他</h2>
+<p>晚上吃饭发现连凳子都没有，因此，买了两个凳子</p>
+<ul>
+<li>凳子*2，￥60</li>
+</ul>
+<p>总的来说，已经投入巨资￥911了，没有回头路了。自己买的菜，含着泪也要做出来并吃完并还要说好吃。</p>
+<p>其他可能需要但还没确定买的东西：</p>
+<ul>
+<li>香油，非必须，主要是挺贵的，实在需要了再买吧</li>
+<li>丝瓜瓢，非必须，看网上说这个洗东西会洗很干净，但现在好像没必要</li>
+<li>水槽过滤网，看网上说很方便，跑了两家超市都没有，先算了吧</li>
+<li>围腰，这个好像是需要的，只能网购</li>
+<li>夹子，用来夹住已经拆袋盐、味精袋子，后来发现自己有</li>
+<li>配菜碟子，现在直接吃酸豇豆袋子，实在不方便，碗又太大了，跑了几家超市都没有，只能网上买了。</li>
+</ul>
+<h2 id="菜品" tabindex="-1"> 菜品</h2>
+<h3 id="西红柿蛋汤-超级简单版" tabindex="-1"> 西红柿蛋汤（超级简单版）</h3>
+<ul>
+<li>材料：西红柿2个，鸡蛋2-3个，盐，油，葱花</li>
+<li>步骤：
+<ol>
+<li>西红柿切片，葱切碎，鸡蛋搅好</li>
+<li>锅中倒入少许油，葱和西红柿下锅翻炒</li>
+<li>倒入清水烧开</li>
+<li>放入鸡蛋液</li>
+<li>放入少许盐</li>
+<li>完成</li>
+</ol>
+</li>
+</ul>
+<p><img src="/blog/imgs/eed7dd37bb17c14a480848bd57f29976.jpg" alt="" loading="lazy"></p>
+<h3 id="青椒煎蛋" tabindex="-1"> 青椒煎蛋</h3>
+<ul>
+<li>材料：青椒2个，鸡蛋2个，盐，油</li>
+<li>步骤：
+<ol>
+<li>将鸡蛋和切碎的青椒搅拌，加入适当的盐</li>
+<li>锅中倒入<code>适量的油</code>，倒入青椒鸡蛋液，以<code>小火</code>慢煎</li>
+<li>一面煎好有香味飘出，可以翻转另一面</li>
+<li>完成</li>
+</ol>
+</li>
+</ul>
+<p><img src="/blog/imgs/68a1ff707d01370b83d47ac10f3451f2.jpg" alt="" loading="lazy"></p>
+<h3 id="炒酸辣白菜" tabindex="-1"> 炒酸辣白菜</h3>
+<p><img src="/blog/imgs/eadda9029e3a58a297db9325726a11a9.jpg" alt="" loading="lazy"></p>
+<h3 id="家常豆腐" tabindex="-1"> 家常豆腐</h3>
+<p>// TODO</p>
+<h3 id="煎土豆" tabindex="-1"> 煎土豆？</h3>
+<p><img src="/blog/imgs/861848e71839c4ef6d641cfe07b96d0f.jpg" alt="" loading="lazy"></p>
+]]></content:encoded>
+      <enclosure url="https://newzone.top/blog/imgs/eed7dd37bb17c14a480848bd57f29976.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>杭州两日</title>
+      <link>https://newzone.top/_posts/2019-11-02-hang-zhou-two-days.html</link>
+      <guid>https://newzone.top/_posts/2019-11-02-hang-zhou-two-days.html</guid>
+      <source url="https://newzone.top/rss.xml">杭州两日</source>
+      <pubDate>Sat, 02 Nov 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="出发" tabindex="-1"> 出发</h2>
+<p>大学舍友群里，不知为何有人突然提起去杭州（小胖的工作地点）玩一下，说走就走。</p>
+<p>上一次去杭州已经是四年前的事情，留下了很深的印象，这一次去玩一是见朋友，二是印证当初所见风景的变化。</p>
+<p>南京到杭州的高铁很多，选了7点半的一班，90分钟后就到了，然后直接坐地铁4号线直达舍友所在的地方——联庄。</p>
+<h2 id="钱塘江" tabindex="-1"> 钱塘江</h2>
+<p>琐事不必多提，我们来到钱塘江边，看江面以及两面的风景：</p>
+<p><em><strong>钱塘江，江水浑浊</strong></em></p>
+<p><img src="/blog/imgs/3c1b64c1e0a48299bed51cfa5c07e02c.jpg" alt="" loading="lazy"></p>
+<p>然后，我们骑单车驶过钱塘江大桥，桥面可供行人走的路实在太窄，骑着车在江面上心底委实害怕，我们计划到下图中江对面的塔那边看看：</p>
+<p><em><strong>钱塘江大桥</strong></em></p>
+<p><img src="/blog/imgs/061a342293982b36541bc02478665ab5.jpg" alt="" loading="lazy"></p>
+<p><em><strong>桥上所摄，心里怕怕</strong></em></p>
+<p><img src="/blog/imgs/7de8990ca18a12646cbc840a68173a45.jpg" alt="" loading="lazy"></p>
+<h2 id="六合塔" tabindex="-1"> 六合塔</h2>
+<p><img src="/blog/imgs/650c821ad2f760d3960a5b811bcfd8c8.jpg" alt="" loading="lazy"></p>
+<p>先到了六合塔，我们现在塔下周围逛了一圈，这里除了这座12层巨塔以外，还有几十座小型的塔隐藏在山丘林间小径两边：</p>
+<p><em><strong>开元寺 宝篋印经式石塔 / 光孝寺 东西铁塔 / 碧云寺 金刚宝座塔</strong></em></p>
+<p><img src="/blog/imgs/cc39c339079b46fcdb4d2780373cc7a5.jpg" alt="" loading="lazy">
+<img src="/blog/imgs/31d020318cef9de6f9103eb076ab6d6e.jpg" alt="" loading="lazy">
+<img src="/blog/imgs/21a707332db61af8da8ac1b6ead5e427.jpg" alt="" loading="lazy"></p>
+<p>数量很多，不可胜记，再来一组：</p>
+<p><em><strong>海宝塔 / 佛光寺祖师塔 / 小雁塔</strong></em></p>
+<p><img src="/blog/imgs/7c1e44f34c52597605241cacd581034b.jpg" alt="" loading="lazy">
+<img src="/blog/imgs/44faa52081d79b45abf139cd6c803e16.jpg" alt="" loading="lazy">
+<img src="/blog/imgs/5ce2c676d4a6c53bfb78ac981e2f9f73.jpg" alt="" loading="lazy"></p>
+<p>最后，我们登上六合塔：</p>
+<p><em><strong>塔上看钱塘江大桥</strong></em></p>
+<p><img src="/blog/imgs/30d905578e0354eecbc28749065412f0.jpg" alt="" loading="lazy"></p>
+<p>这里还有一个小插曲，越往上走，塔上面的走廊倾斜越厉害，一度不敢站在窗边上拍照，还挺刺激的。</p>
+<h2 id="西湖·夜" tabindex="-1"> 西湖·夜</h2>
+<p>下午回去休息了一会儿，等另一个朋友到时，一起去晚上的西湖边上走走。</p>
+<p>晚上的西湖边还好，人没有想象得那么多。湖边灯光耀眼，拍照不易。</p>
+<p><em><strong>西湖的水</strong></em></p>
+<p><img src="/blog/imgs/a4aba453ca4f7bd2adfbc6442f6a0c26.jpg" alt="" loading="lazy"></p>
+<p><img src="/blog/imgs/888e96599a26ba9e1a8639ed3b740642.jpg" alt="" loading="lazy"></p>
+<p><em><strong>最好的我们</strong></em></p>
+<p><img src="/blog/imgs/9d2ed939b145aba5fca722e437f64850.jpg" alt="" loading="lazy"></p>
+<p>等了一会儿，看了音乐喷泉的表演，然后就回去了。</p>
+<h2 id="爬山" tabindex="-1"> 爬山</h2>
+<p>第二天，早起出门爬山，访真迹寺及云栖竹径景区。</p>
+<p>爬山辛苦不必多提，到半山就下来了，下山路一路竹林，连绵的青翠。</p>
+<p><img src="/blog/imgs/345606cf063bba96bf9d355ff5031131.jpg" alt="" loading="lazy"></p>
+<p>小径两旁随处可见的数百年的大树，最久的一棵树有1030年，令人大开眼界：</p>
+<p><img src="/blog/imgs/8940b85a1943c37d56cf6c7ad12b14a4.jpg" alt="" loading="lazy"></p>
+<p><em><strong>山下</strong></em></p>
+<p><img src="/blog/imgs/cac2be898383887ea0b550293e0240d1.jpg" alt="" loading="lazy"></p>
+<h2 id="西溪湿地公园" tabindex="-1"> 西溪湿地公园</h2>
+<p>下午去西溪。</p>
+<p>「他」留下了「西溪国家湿地公园」这几个字：</p>
+<p><img src="/blog/imgs/76c2da7b776d9b2a67c468e7bee3d7cb.jpg" alt="" loading="lazy"></p>
+<p>徜徉街巷，西溪没变，还是那个感觉。那时是春天，百花盛开，此刻是秋天，野趣盎然。</p>
+<p><img src="/blog/imgs/e84fc8abd421616d458e5488e49b6285.jpg" alt="" loading="lazy"></p>
+<p><em><strong>西溪且留下</strong></em></p>
+<p><img src="/blog/imgs/4c6e5a94c8cae31c95a5d702684553bb.jpg" alt="" loading="lazy"></p>
+<h2 id="归去" tabindex="-1"> 归去</h2>
+<p>两日之旅到此为止了，中途发生的一些趣事不及详述，简单图文记录以纪念。</p>
+]]></content:encoded>
+      <enclosure url="https://newzone.top/blog/imgs/3c1b64c1e0a48299bed51cfa5c07e02c.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>泡面了解一下？</title>
+      <link>https://newzone.top/_posts/2019-12-05-getting-to-know-about-instant-noodles.html</link>
+      <guid>https://newzone.top/_posts/2019-12-05-getting-to-know-about-instant-noodles.html</guid>
+      <source url="https://newzone.top/rss.xml">泡面了解一下？</source>
+      <pubDate>Thu, 05 Dec 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>今天在V站上看到一个有趣的话题，甩个链接 <a href="https://www.v2ex.com/t/624737?p=1" target="_blank" rel="noopener noreferrer">好吃的泡面/方便面类食品推荐？ - V2EX</a>，看到了V友们说的各个种类的方便面，有的我第一次听说，顿时感觉打开了新世界，突然有了一个想法，吃遍……。</p>
+<h2 id="v友推荐" tabindex="-1"> V友推荐</h2>
+<p>先大概列一下各位V友所提及的各个泡面/方便面：</p>
+<ul>
+<li>
+<p><strong>和厨</strong></p>
+</li>
+<li>
+<p>泰国的有几款<strong>冬阴功</strong>味的不错，也不贵</p>
+</li>
+<li>
+<p>袋装是不是叫<strong>出前一丁</strong>？面和调料口味都比较淡，我周围的人都说不好吃。我有时候用来当挂面煮吃。另外，也比较贵。</p>
+</li>
+<li>
+<p><strong>汤达人</strong>；一菜一面；</p>
+</li>
+<li>
+<p><strong>出前一丁黑蒜油猪骨汤味</strong>，泡煮炒都很好吃</p>
+</li>
+<li>
+<p><strong>出前一丁</strong></p>
+</li>
+<li>
+<p>出前一丁主要面相对好，搭配其他自己炒煮会好吃很多</p>
+</li>
+<li>
+<p><strong>合味道</strong>的话是日清的，所以日清别的面楼主都可以试试，最常见的就是大家提到的出前一丁了，个人比较喜欢<strong>元祖鸡汤拉面</strong>和<strong>炒面大王</strong>（已停产），还有拉王也不错。</p>
+</li>
+<li>
+<p>汤达人</p>
+</li>
+<li>
+<p><strong>五谷道场</strong></p>
+</li>
+<li>
+<p><strong>火鸡面</strong>如果你能接受辣味的话其实挺香的。。</p>
+</li>
+<li>
+<p>吃了只能煮的面之后逐渐就不想吃可以泡的面了，面条不好吃。</p>
+</li>
+<li>
+<p>推荐<strong>农心辛拉面</strong>，<strong>三养火鸡面</strong></p>
+</li>
+<li>
+<p>只吃煮面，演变路径 <strong>汤达人</strong>(所有)-&gt;<strong>农心</strong>(部队锅除外)-&gt;<strong>出前一丁</strong>(黑蒜油、麻油别的不好吃) 。偶尔吃<strong>统一老坛酸菜</strong>，中间试过五谷道场不好吃，农心韩式部队锅吃着想吐，康师傅的看看就好</p>
+</li>
+<li>
+<p>出前一丁？一包盐能给你咸哭</p>
+</li>
+<li>
+<p>煮面可以吗？可以的话提名一个辛拉面！</p>
+</li>
+<li>
+<p>现在也就偶尔晚上加个蛋煮面，基本就汤达人了，出前一丁以前吃太淡，辛拉面还行，但和康师傅煮出来没啥差还不如康师傅，五谷道场非油炸可能健康点，但面味道还是有差异看你接受程度了，以前上学吃过日清的海鲜面好像也是非油炸的影响深刻，但后来再没见过</p>
+</li>
+<li>
+<p><strong>合味道</strong></p>
+</li>
+<li>
+<p><strong>拉王 福冈辣豚骨风味</strong></p>
+</li>
+<li>
+<p><strong>日清</strong>，出前一丁</p>
+</li>
+<li>
+<p><strong>汤达人</strong> 黄色的那个 酸酸辣辣豚骨面？</p>
+</li>
+<li>
+<p>啊还有个叫 <strong>KOKA</strong> 的拌面 我也觉得好吃</p>
+</li>
+<li>
+<p><strong>金博家</strong> 葱葱回魂辣汤面</p>
+</li>
+<li>
+<p><strong>百胜厨</strong>，koko，汤达人。尤其百胜厨，煮出来加点辅料，不输餐厅出品</p>
+</li>
+<li>
+<p><strong>一兰拉面</strong>， 比较贵</p>
+</li>
+<li>
+<p><strong>辛拉面</strong> +1</p>
+</li>
+<li>
+<p>狗东优惠的时候 cj 的即食米饭不错</p>
+</li>
+<li>
+<p>bug 价 7 元左右一碗 黑椒牛肉的 有蔬菜 有米饭 常温保存 微波炉打一下就行</p>
+</li>
+<li>
+<p><strong>康师傅</strong>？</p>
+</li>
+<li>
+<p>要便宜就自己买煮的<strong>挂面</strong></p>
+</li>
+<li>
+<p><strong>白象大骨面</strong></p>
+</li>
+<li>
+<p><strong>碗仔面</strong></p>
+</li>
+<li>
+<p>我买的最贵的就是 汤达人..</p>
+</li>
+<li>
+<p>便宜的就** 豫竹 白象**，都有一块一袋的</p>
+</li>
+<li>
+<p><strong>乌龙面</strong>超级好吃</p>
+</li>
+<li>
+<p><strong>日清</strong>全部, <strong>汤达人</strong>, 要是有心情费点功夫开火煮的话可以买寿桃的速食面, 加点牛丸培根小白菜什么的煮煮可以很大程度提升用户体验... 那款车仔面挺好的便宜还带料包, 泡了扮扮就顶一顿饭</p>
+</li>
+<li>
+<p>这个淘宝上没找到，不知道和上面说的拉王是不是一个产品，但是我看包装是不一样的。这个面是那种圆形的粗面，煮出来有嚼劲。这个味道就是豚骨加黑色的油，里面还有芝麻，很香。每次先电磁炉 1000 煮两分钟，然后打一个鸡蛋，转 800，就能吃到配图上面的半熟蛋了。</p>
+</li>
+<li>
+<p>出前一丁的话，我吃过的都是那种普通面板加一小包调料，感觉就是蟹黄面那种水平的啊，难道还有别的产品线？（上面的栗子头不会去“白嫖”啊）</p>
+</li>
+<li>
+<p>好的方便面都变成煮的了，而不是泡的。所以，买<strong>挂面</strong>自己煮吧。</p>
+</li>
+<li>
+<p>汤达人还行 偶尔吃吃</p>
+</li>
+<li>
+<p>拉王</p>
+</li>
+<li>
+<p>泡面无所谓 但是补充的蔬菜包要有 以前买<strong>泡面伴侣</strong> 一小包榨菜那么多的脱水蔬菜</p>
+</li>
+<li>
+<p>和厨好多人推荐，然后买了发现上当了，冻干面还没普通泡面好吃。。。</p>
+</li>
+<li>
+<p>当然是<strong>幸运方便面</strong>，干吃也美味</p>
+</li>
+<li>
+<p><strong>火鸡面</strong>，挺好吃的，不能吃辣就少放点那个酱料。剩下的第二天可以自己搞个面糊摊饼子蘸着吃，超级好吃</p>
+</li>
+<li>
+<p><strong>豫竹</strong>干吃的面挺好吃的 比那个老北京强</p>
+</li>
+<li>
+<p>煮<strong>螺蛳粉</strong>比泡面好吃多了</p>
+</li>
+<li>
+<p><strong>汤达人日式豚骨拉面</strong></p>
+</li>
+<li>
+<p>不过感觉没有前几年好吃了，不知道是不是因为吃多了没感觉了</p>
+</li>
+<li>
+<p>拉王已停产</p>
+</li>
+<li>
+<p><strong>新版拉王</strong>就是个高配版合味道 面饼不如之前的拉王</p>
+</li>
+<li>
+<p>海底捞那个小火锅</p>
+</li>
+<li>
+<p>&quot;想要便宜一些&quot;? 大今野 比唐师傅 /统一 便宜。</p>
+</li>
+<li>
+<p>国产拉王停产了，可惜，好像是日清不给今麦郎做了，</p>
+</li>
+<li>
+<p>推荐好欢乐的螺蛳粉， 速冻水饺， 得益热水泡的方便米饭，一菜一面番茄味</p>
+</li>
+<li>
+<p>日清的杯面，海鲜口味的</p>
+</li>
+<li>
+<p>上 tb 搜索“辛拉面餐饮包”。</p>
+</li>
+<li>
+<p>五谷道场的<strong>番茄牛肉面</strong>超好吃，而且也不贵</p>
+</li>
+<li>
+<p>三全 一碗饭</p>
+</li>
+<li>
+<p>五！谷！道！场！</p>
+</li>
+<li>
+<p><strong>汤达人的酸酸辣辣豚骨面</strong>天下第一</p>
+</li>
+<li>
+<p>我说个冷门的，肉蓉面。只能煮，配电菜叶子。也可以买点热干面调料。</p>
+</li>
+<li>
+<p>汤达人不错，味道可以就是有些小贵 8.8</p>
+</li>
+<li>
+<p><strong>飞碟炒面</strong>，合味道。家中常备</p>
+</li>
+<li>
+<p>要便宜的话，<strong>华丰三鲜伊面</strong>，大约 1 块</p>
+</li>
+<li>
+<p>华丰本身味道也不错，再买一些调味品，比如藤椒油、油泼辣子、蒜酱、芝麻酱之类，吃烦了自己换口味</p>
+</li>
+<li>
+<p><strong>百胜厨叻沙拉面</strong></p>
+</li>
+<li>
+<p>没有红烧牛肉面吗</p>
+</li>
+<li>
+<p><strong>辛拉面</strong> <strong>安城汤面</strong></p>
+</li>
+<li>
+<p><strong>康师傅</strong>说真的蛮便宜管饱</p>
+</li>
+<li>
+<p>蹩问了，<strong>康师傅</strong>最香</p>
+</li>
+<li>
+<p>个人不太喜欢日式的，所以推荐你<strong>统一的酱拌面</strong></p>
+</li>
+<li>
+<p>福满多</p>
+</li>
+<li>
+<p>泡面、煮面 楼上各位大佬都提了很多很棒的，我就不多嘴了。我这里推荐一款干脆面：<strong>豫竹的酥司令</strong>！酥司令！酥司令！（他家还有一款脆司令比较脆，没这个酥，注意区别）。酥司令我都是整箱买来当零食吃的，真好吃，大爱火鸡味（不辣，不是火鸡面的那种）。</p>
+</li>
+<li>
+<p>偶尔吃吃<strong>火鸡面</strong>，感觉挺爽，但是看楼主的意思是要囤货吃泡面吗？吃多了我都想吐</p>
+</li>
+<li>
+<p><strong>日清的新意派</strong></p>
+</li>
+<li>
+<p><strong>日清始祖鸡汤拉面</strong></p>
+</li>
+<li>
+<p>汤达人 +1</p>
+</li>
+<li>
+<p><strong>食族人</strong>，真心不错，有很多口味我都试过了，推荐 3 种：麻辣爆肚、私房牛肉面、螺蛳粉。</p>
+</li>
+<li>
+<p><strong>顾大嫂拌面</strong>，这个面条很棒，拌料挺香的，虽说是泡面，但我一般煮着吃更得劲。买了三箱</p>
+</li>
+<li>
+<p>自己下挂面又不难，生抽老抽胡椒粉汤，面汤一冲就是<strong>阳春面</strong></p>
+</li>
+<li>
+<p><strong>越南林富记的河粉</strong>不错</p>
+</li>
+<li>
+<p>是啊，原来那种绿色包装的 2~3 块一袋，汤很浓，煮着吃很好吃。停产之后，现在网上卖的拉王价格翻了一番</p>
+</li>
+<li>
+<p>学习了学习了，<strong>辛拉面</strong>不错，就是有点儿贵，5-6 块一包，尝试下大家说的其他的，希望能找到性价比高的面</p>
+</li>
+<li>
+<p><strong>白象猪骨面</strong> 煮着是真的好吃</p>
+</li>
+<li>
+<p><strong>和厨的番茄鸡蛋面</strong>吃着真不错 汤泡的特正</p>
+</li>
+<li>
+<p>别说了楼主，看了这篇帖子，我已经 jd 下单了近 100 块的泡面了…</p>
+</li>
+<li>
+<p>我喜欢吃<strong>公仔面</strong> 没那么多油 清淡一点</p>
+</li>
+</ul>
+<h2 id="尝试-持续更新" tabindex="-1"> 尝试（持续更新）</h2>
+<h3 id="辛拉面辣白菜杯面" tabindex="-1"> 辛拉面辣白菜杯面</h3>
+<p>@2019.12.05</p>
+<p>下班回家超市选了半天，今天就决定是它了：</p>
+<p><img src="/blog/imgs/b414a8e5fb2dcacee4c599ea5c5b272f.jpg" alt="" loading="lazy"></p>
+<p>一小杯70克，6块钱，比一般的面要贵一些，主要是量太少了，不够吃的，还好我机智买了一根100克的香肠作为搭档。</p>
+<p><img src="/blog/imgs/77de4f5fb27b1c3ffa3ad7ec07eb1652.jpg" alt="" loading="lazy"></p>
+<p>拆开之后，里面有一个蔬菜包和调味包，全部放进去，泡水等着吧。普及一下，辛拉面这种一份杯面是油炸型的，所以直接开水泡就可以吃了。还有其他大份袋装或盒装的有的是非油炸型的，需要水煮才好吃，开水泡的话不容易熟。</p>
+<p><strong>食后评价</strong>：打开之后第一下闻到的辣白菜味道很好闻，开水放满了导致面有点烂，然后太烫了，总体吃起来味道比较淡，汤感觉还好。由于消灭过快导致还没有来得及尝出味道就结束了，下次要买个大份的。</p>
+<h3 id="食族人麻辣爆肚粉" tabindex="-1"> 食族人麻辣爆肚粉</h3>
+<p>@2019.12.07</p>
+<p>我去，我以为买的是面，直到打开的时候才发现是粉丝：</p>
+<p><img src="/blog/imgs/a68535f0c9aced09a6b442caa418b999.jpg" alt="" loading="lazy">
+<img src="" alt="" loading="lazy">
+<img src="/blog/imgs/22e4bf3b18ca84f36ee2c52e5075258d.jpg" alt="" loading="lazy"></p>
+<p><img src="/blog/imgs/6965ecc6ee26c1d704e93420336d8ab4.jpg" alt="" loading="lazy"></p>
+<p>这一杯150克，粉饼60克+配料90克，有6个配料包！（调味粉包、调味酱包、菜包、芝麻酱包、辣椒油包、肚包）。。。。这个要用大碗来泡。</p>
+<p><strong>食后评价</strong>：感觉还可以，有麻辣粉丝那个感觉，有点辣，所以汤就不喝了。粉丝的缺点就是吃完没有饱的感觉，这个也同样。考虑到它的价格是12.5，算起来还是不值的。</p>
+<h3 id="汤达人豚骨拉面" tabindex="-1"> 汤达人豚骨拉面</h3>
+<p>@2019.12.07</p>
+<p>这是汤达人的豚骨拉面杯面，面饼+调料包83克：</p>
+<p><img src="/blog/imgs/3f5939812dd6ec3cbfdc4ab6e62be9bb.jpg" alt="" loading="lazy">
+<img src="/blog/imgs/df5b7fa768d946b4624fb6f6b5bcd04c.jpg" alt="" loading="lazy"></p>
+<p>显然也肯定吃不饱（本来中午就没吃饱）。这次有经验了，水不会倒满。</p>
+<p><strong>食后评价</strong>：我发现了，杯面都有一个缺点——水太烫了，热量不能及时散去，这是杯口小的缘故。第一下味道很好闻，由于烫还是没有感觉到味道，感觉跟之前的辛拉面区别不大。看来我与杯面绝缘了。</p>
+]]></content:encoded>
+      <enclosure url="https://newzone.top/blog/imgs/b414a8e5fb2dcacee4c599ea5c5b272f.jpg" type="image/jpeg"/>
+    </item>
     <item>
       <title>phpmyadmin not found</title>
       <link>https://newzone.top/_posts/2016-11-16-phpmyadmin-not-found.html</link>
@@ -1087,395 +1578,119 @@ xdebug.remote_autostart=On</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>Query error：Duplicate entry &amp;apos;XXXXXXXXXXXXXXXX&amp;apos; for key &amp;apos;uniq_order_id&amp;apos;</title>
-      <link>https://newzone.top/_posts/2022-05-24-query-error-duplicate-entry-for-key.html</link>
-      <guid>https://newzone.top/_posts/2022-05-24-query-error-duplicate-entry-for-key.html</guid>
-      <source url="https://newzone.top/rss.xml">Query error：Duplicate entry 'XXXXXXXXXXXXXXXX' for key 'uniq_order_id'</source>
-      <pubDate>Tue, 24 May 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="问题及原因" tabindex="-1"> 问题及原因</h2>
-<p>线上日志报了个错：</p>
-<div><pre><code>Query error: Duplicate entry 'XXXXXXXXXXXXXXXX' for key 'uniq_order_id' - Invalid query: INSERT INTO `xxx_result` (`sign`, `expire_at`, `order_id`) VALUES ('VNEZvnetZ0cib84s1Io206rp9vuF1keXGsTKoDeEtPw6oLpmnSfi/KNlYkq+EfpV', '2025-05-23 08:12:29', 'XXXXXXXXXXXXXXXX')
-</code></pre><div aria-hidden="true"><div></div></div></div><p>出错代码如下：「先查询一下，如果有则更新，否则插入」，报错应该是第5行，同时有多个进程插入同样的数据，后插入的那个报错了。</p>
-<div><pre><code><span>$info</span> <span>=</span> <span>$this</span><span>-></span><span>model</span><span>-></span><span>get_row</span><span>(</span><span>$where</span><span>)</span><span>;</span>
-<span>if</span> <span>(</span><span>$info</span><span>)</span> <span>{</span>
-    <span>$this</span><span>-></span><span>model</span><span>-></span><span>update</span><span>(</span><span>$data</span><span>,</span> <span>$where</span><span>)</span><span>;</span>
-<span>}</span> <span>else</span> <span>{</span>
-	<span>$this</span><span>-></span><span>model</span><span>-></span><span>insert</span><span>(</span><span>$data</span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>那么为什么会有同样的进程在执行呢？</p>
-<p>往上层调用查看，发现是消费队列常驻消费者进程代码调用的。那么消费者进程为什么会有多个同时在执行呢？</p>
-<p>再看日志，搜索订单号，查看相关日志，发现有一个远程API回调几乎是同一时刻回调了两次，两次回调的内容是一样的，回调的内容会被添加到消息队列中。也就是说消息队列中有两个一样的消息。</p>
-<p>但我记得在 supersivor 配置文件中 numproc=1 应该只有一个进程啊，按顺序消费也不至于报错。为什么会有多个进程？</p>
-<p>后来问了一下运维，消费者进程部署在了不同的机器（4个）上面，每个机器的限制是一个，但同时可能会有多个。</p>
-<p>终于原因找到了。</p>
-<h2 id="解决" tabindex="-1"> 解决</h2>
-<p>那么如何解决呢？</p>
-<p>想到两个方案，一个是在代码中加锁，另一个是使用 rabbitmq 的「单一活跃者队列」。</p>
-<h3 id="代码加锁" tabindex="-1"> 代码加锁</h3>
-<p>想到两种加锁方式，一种是不等待，一种是等待。</p>
-<p>不等待加锁代码如下：</p>
-<div><pre><code><span>$info</span> <span>=</span> <span>$this</span><span>-></span><span>model</span><span>-></span><span>get_row</span><span>(</span><span>$where</span><span>)</span><span>;</span>
-<span>if</span> <span>(</span><span>$info</span><span>)</span> <span>{</span>
-    <span>$this</span><span>-></span><span>model</span><span>-></span><span>update</span><span>(</span><span>$data</span><span>,</span> <span>$where</span><span>)</span><span>;</span>
-<span>}</span> <span>else</span> <span>{</span>
-	<span>if</span> <span>(</span><span>lock</span><span>::</span><span>get</span><span>(</span><span>$uni_key</span><span>,</span> <span>5</span><span>)</span><span>)</span> <span>{</span>
-		<span>$this</span><span>-></span><span>model</span><span>-></span><span>insert</span><span>(</span><span>$data</span><span>)</span><span>;</span>
-	<span>}</span> <span>else</span> <span>{</span>
-		<span>log</span><span>(</span><span>)</span><span>;</span>
-		<span>exit</span><span>(</span><span>)</span><span>;</span>
-	<span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>获取一个维持5秒的锁，如果获取不到，说明这时已经有进程在处理同样的数据，直接记日志并退出处理。如果获取到了锁，则执行插入。</p>
-<p>等待的加锁（阻塞）</p>
-<div><pre><code><span>$info</span> <span>=</span> <span>$this</span><span>-></span><span>model</span><span>-></span><span>get_row</span><span>(</span><span>$where</span><span>)</span><span>;</span>
-<span>if</span> <span>(</span><span>$info</span><span>)</span> <span>{</span>
-    <span>$this</span><span>-></span><span>model</span><span>-></span><span>update</span><span>(</span><span>$data</span><span>,</span> <span>$where</span><span>)</span><span>;</span>
-<span>}</span> <span>else</span> <span>{</span>
-    <span>lock</span><span>::</span><span>wait_get</span><span>(</span><span>$uni_key</span><span>,</span> <span>60</span><span>)</span><span>)</span>
-    <span>$info</span> <span>=</span> <span>$this</span><span>-></span><span>model</span><span>-></span><span>get_row</span><span>(</span><span>$where</span><span>)</span><span>;</span>
-    <span>if</span> <span>(</span><span>!</span><span>$info</span><span>)</span> <span>{</span>
-        <span>$this</span><span>-></span><span>model</span><span>-></span><span>insert</span><span>(</span><span>$data</span><span>)</span><span>;</span>
-    <span>}</span>
-    <span>lock</span><span>::</span><span>release_lock</span><span>(</span><span>$uni_key</span><span>)</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>获取一个超时时间为20秒的锁，如果获取不到，则内部报错记日志。20秒内，一直等待直到获取锁，获取到锁之后，再查一遍，如果查不到，再插入，结束之后释放锁。</p>
-<h3 id="单一消费者队列" tabindex="-1"> 单一消费者队列</h3>
-<p>rabbitmq 有一个配置是 <code>'x-single-active-consumer' =&gt; true</code>，设置之后，一个队列如果有多个消费者的，那么同时只能有一个消费者活跃，即消费消息。<sup></sup> 在代码的消费者中修改声明队列的方法，添加上述配置。</p>
-<p>线上现有的队列已经生成，无法添加队列属性，有两个做法，</p>
-<p>一个是删掉线上队列，上线新代码之后，重新启动消费者进程，重新创建队列。但这样可能会导致丢消息。</p>
-<p>另一个是修改一下队列配置中的队列名，上线新代码之后，重新启动消费者进程，创建新队列。这种比较可行。</p>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<p>代码修改方式比较灵活，但是容易出 bug，并且每个业务涉及的地方都需要改，出错概率也很大。</p>
-<p>单一消费者队列配置比较简单，但是也限制了队列的吞吐量，对于需要多个消费者的队列并不适用。</p>
-<hr>
-<section>
-<ol>
-<li id="footnote1"><p><a href="https://www.rabbitmq.com/consumers.html#single-active-consumer" target="_blank" rel="noopener noreferrer">https://www.rabbitmq.com/consumers.html#single-active-consumer</a> </p>
-</li>
-</ol>
-</section>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>golang 学习（1）</title>
-      <link>https://newzone.top/_posts/2022-07-03-learn-golang-1.html</link>
-      <guid>https://newzone.top/_posts/2022-07-03-learn-golang-1.html</guid>
-      <source url="https://newzone.top/rss.xml">golang 学习（1）</source>
-      <pubDate>Sun, 03 Jul 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>终于，不能再拖延了，请立刻开始学习、写代码并记录总结！</p>
-<hr>
-<h3 id="安装开发环境" tabindex="-1"> 安装开发环境</h3>
-<p>我是 mac 环境，命令行里执行安装 golang：</p>
-<div><pre><code>$ brew <span>install</span> go
-</code></pre><div aria-hidden="true"><div></div></div></div><p>安装好之后，查看golang版本：</p>
-<div><pre><code>$ go version
-go version go1.18.2 darwin/amd64
-</code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>查看环境变量：</p>
-<div><pre><code>$ go <span>env</span>
-<span>GO111MODULE</span><span>=</span><span>""</span>
-<span>GOARCH</span><span>=</span><span>"amd64"</span>
-<span>GOBIN</span><span>=</span><span>"/Users/feiffy/Code/go/bin"</span>
-<span>GOCACHE</span><span>=</span><span>"/Users/feiffy/Library/Caches/go-build"</span>
-<span>GOENV</span><span>=</span><span>"/Users/feiffy/Library/Application Support/go/env"</span>
-<span>GOEXE</span><span>=</span><span>""</span>
-<span>GOEXPERIMENT</span><span>=</span><span>""</span>
-<span>GOFLAGS</span><span>=</span><span>""</span>
-<span>GOHOSTARCH</span><span>=</span><span>"amd64"</span>
-<span>GOHOSTOS</span><span>=</span><span>"darwin"</span>
-<span>GOINSECURE</span><span>=</span><span>""</span>
-<span>GOMODCACHE</span><span>=</span><span>"/Users/feiffy/Code/go/pkg/mod"</span>
-<span>GONOPROXY</span><span>=</span><span>""</span>
-<span>GONOSUMDB</span><span>=</span><span>""</span>
-<span>GOOS</span><span>=</span><span>"darwin"</span>
-<span>GOPATH</span><span>=</span><span>"/Users/feiffy/go"</span>
-<span>GOPRIVATE</span><span>=</span><span>""</span>
-<span>GOPROXY</span><span>=</span><span>"https://mirrors.aliyun.com/goproxy/,direct"</span>
-<span>GOROOT</span><span>=</span><span>"/usr/local/Cellar/go/1.18.2/libexec"</span>
-<span>GOSUMDB</span><span>=</span><span>"sum.golang.org"</span>
-<span>GOTMPDIR</span><span>=</span><span>""</span>
-<span>GOTOOLDIR</span><span>=</span><span>"/usr/local/Cellar/go/1.18.2/libexec/pkg/tool/darwin_amd64"</span>
-<span>GOVCS</span><span>=</span><span>""</span>
-<span>GOVERSION</span><span>=</span><span>"go1.18.2"</span>
-<span>GCCGO</span><span>=</span><span>"gccgo"</span>
-<span>GOAMD64</span><span>=</span><span>"v1"</span>
-<span>AR</span><span>=</span><span>"ar"</span>
-<span>CC</span><span>=</span><span>"clang"</span>
-<span>CXX</span><span>=</span><span>"clang++"</span>
-<span>CGO_ENABLED</span><span>=</span><span>"1"</span>
-<span>GOMOD</span><span>=</span><span>"/dev/null"</span>
-<span>GOWORK</span><span>=</span><span>""</span>
-<span>CGO_CFLAGS</span><span>=</span><span>"-g -O2"</span>
-<span>CGO_CPPFLAGS</span><span>=</span><span>""</span>
-<span>CGO_CXXFLAGS</span><span>=</span><span>"-g -O2"</span>
-<span>CGO_FFLAGS</span><span>=</span><span>"-g -O2"</span>
-<span>CGO_LDFLAGS</span><span>=</span><span>"-g -O2"</span>
-<span>PKG_CONFIG</span><span>=</span><span>"pkg-config"</span>
-<span>GOGCCFLAGS</span><span>=</span><span>"-fPIC -arch x86_64 -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=/var/folders/jj/y391w94114bfxtn4t98q0lpw0000gn/T/go-build94119515=/tmp/go-build -gno-record-gcc-switches -fno-common"</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>注意到这里的 <code>$GOPATH</code> 默认是在 home 目录下的，我想把它改到我的 <code>Code</code> 目录下面，为此，在 <code>~/.zshrc</code> 中添加以下配置：</p>
-<div><pre><code><span>export</span> <span>GOPATH</span><span>=~</span>/Code/go
-<span>export</span> <span>GOBIN</span><span>=</span><span>$GOPATH</span>/bin
-<span><span>PATH</span></span><span>=</span><span>$PATH</span><span>:</span><span>$GOPATH</span><span>:</span><span>$GOBIN</span>
-<span>export</span> <span>PATH</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>在 $GOPATH 中创建 bin src pkg 三个文件夹：</p>
-<div><pre><code>$ <span>mkdir</span> <span>-p</span> <span>$GOPATH</span>/<span>{</span>bin,src,pkg<span>}</span>
-</code></pre><div aria-hidden="true"><div></div></div></div><p>使用 vscode 作为开发工具，打开 <code>$GOPATH</code> 目录</p>
-<div><pre><code>$ <span>cd</span> <span>$GOPATH</span>
-$ code <span>.</span>
-</code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>新建 <code>hello.go</code> 文件，提示要装一些插件，先不点安装，直接 <code>shift + command + P</code> 打开命令输入框搜索 <code>Go: Install/Update Tools</code>，全选，点击安装。</p>
-<p>如果安装失败了，则需要配置一下镜像源：</p>
-<div><pre><code><span># 1. 七牛 CDN </span>
-$ go <span>env</span> <span>-w</span> <span>GOPROXY</span><span>=</span>https://goproxy.cn,direct 
-
-<span># 2. 阿里云 </span>
-
-$ go <span>env</span> <span>-w</span> <span>GOPROXY</span><span>=</span>https://mirrors.aliyun.com/goproxy/,direct
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p><code>hello.go</code> 文件内容：</p>
-<div><pre><code><span>package</span> main
-
-<span>import</span> <span>"fmt"</span>
-
-<span>func</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
-   fmt<span>.</span><span>Println</span><span>(</span><span>"Hello, World!"</span><span>)</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>最后使用内置终端运行 hello 项目：</p>
-<div><pre><code>$ go run main.go
-Hello, World<span>!</span>
-</code></pre><div aria-hidden="true"><div></div><div></div></div></div><h3 id="创建第一个项目-goblog" tabindex="-1"> 创建第一个项目 goblog</h3>
-<p>创建第一个项目 goblog，并用 vscode 打开：</p>
-<div><pre><code>$ <span>cd</span> <span>$GOPATH</span>/src
-$ <span>mkdir</span> goblog
-$ code goblog
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>创建 <code>main.go</code>，内容如下：</p>
-<div><pre><code><span>package</span> main
-
-<span>import</span> <span>(</span>
-    <span>"fmt"</span>
-    <span>"net/http"</span>
-<span>)</span>
-
-<span>func</span> <span>handlerFunc</span><span>(</span>w http<span>.</span>ResponseWriter<span>,</span> r <span>*</span>http<span>.</span>Request<span>)</span> <span>{</span>
-    fmt<span>.</span><span>Fprint</span><span>(</span>w<span>,</span> <span>"&lt;h1>Hello, 这里是 goblog&lt;/h1>"</span><span>)</span>
-<span>}</span>
-<span>func</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
-    http<span>.</span><span>HandleFunc</span><span>(</span><span>"/"</span><span>,</span> handlerFunc<span>)</span>
-    http<span>.</span><span>ListenAndServe</span><span>(</span><span>":3000"</span><span>,</span> <span>nil</span><span>)</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>然后在命令行运行</p>
-<div><pre><code>$ go run main.go
-
-</code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>然后在浏览器打开 <code>http://localhost:3000</code>，看到输出的内容。</p>
-<p>以上就是一个简单的 go web 程序。下面来解释一下上面的代码：</p>
-<p><code>package main</code> 表示一个程序的入口点。</p>
-<p>导入了两个包，<code>fmt</code> 包用来输出，下面 <code>Fprint</code> 函数将内容输出到变量 w 中，我们通常用这个函数来往文件中写入内容。</p>
-<div><pre><code>fmt<span>.</span><span>Fprint</span><span>(</span>w<span>,</span> <span>"&lt;h1>Hello, 这里是 goblog&lt;/h1>"</span><span>)</span>
-</code></pre><div aria-hidden="true"><div></div></div></div><p>第二个包是 <code>net/http</code>，提供了HTTP协议相关的实现。</p>
-<ul>
-<li><code>http.ListenAndServe</code> 用来监听本地3000端口以提供服务，</li>
-<li><code>http.HandleFunc</code> 用来指定处理HTTP请求的处理代码。</li>
-<li><code>http.Request</code> 是用户的请求，一般用<code>r</code>简写</li>
-<li><code>http.ResponseWriter</code> 是用户的响应，一般用<code>w</code>简写</li>
-</ul>
-<h3 id="路径解析" tabindex="-1"> 路径解析</h3>
-<p>将上面的代码改为根据不同路由不同的页面处理：</p>
-<div><pre><code><span>package</span> main
-
-<span>import</span> <span>(</span>
-    <span>"fmt"</span>
-    <span>"net/http"</span>
-<span>)</span>
-
-<span>func</span> <span>handlerFunc</span><span>(</span>w http<span>.</span>ResponseWriter<span>,</span> r <span>*</span>http<span>.</span>Request<span>)</span> <span>{</span>
-    <span>if</span> r<span>.</span>URL<span>.</span>Path <span>==</span> <span>"/"</span> <span>{</span>
-        fmt<span>.</span><span>Fprint</span><span>(</span>w<span>,</span> <span>"&lt;h1>Hello, 这里是 goblog&lt;/h1>"</span><span>)</span>
-    <span>}</span> <span>else</span> <span>if</span> r<span>.</span>URL<span>.</span>Path <span>==</span> <span>"/about"</span> <span>{</span>
-        fmt<span>.</span><span>Fprint</span><span>(</span>w<span>,</span> <span>"此博客是用以记录编程笔记，如您有反馈或建议，请联系 "</span><span>+</span>
-            <span>"&lt;a href=\"mailto:summer@example.com\">summer@example.com&lt;/a>"</span><span>)</span>
-    <span>}</span> <span>else</span> <span>{</span>
-        fmt<span>.</span><span>Fprint</span><span>(</span>w<span>,</span> <span>"&lt;h1>请求页面未找到 :(&lt;/h1>"</span><span>+</span>
-            <span>"&lt;p>如有疑惑，请联系我们。&lt;/p>"</span><span>)</span>
-    <span>}</span>
-<span>}</span>
-
-<span>func</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
-    http<span>.</span><span>HandleFunc</span><span>(</span><span>"/"</span><span>,</span> handlerFunc<span>)</span>
-    http<span>.</span><span>ListenAndServe</span><span>(</span><span>":3000"</span><span>,</span> <span>nil</span><span>)</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>这里的<code>/</code>并不是根目录，而是表示任意目录。</p>
-<h3 id="自动载入工具" tabindex="-1"> 自动载入工具</h3>
-<p>go代码每次需要编译运行才能看到效果，可以安装<code>air</code>工具，监控项目文件变化，一旦有变更则自动触发编译运行，这样就不用每次我们手动编译运行了。</p>
-<p><code>air</code>是用go写的一个命令行工具，用下面的命令安装air：</p>
-<div><pre><code>$ <span>GO111MODULE</span><span>=</span>on  go <span>install</span> github.com/cosmtrek/air@latest
-</code></pre><div aria-hidden="true"><div></div></div></div><p>最前面的 <code>GO111MODULE=on</code> 是只为当前命令启用 Go Module。</p>
-<p>安装好之后，在项目根目录下执行 <code>air</code> 即可。下面是执行效果，每当改动文件时，都会自动载入，有错误也报出来了。</p>
-<div><pre><code>failed to build, error: <span>exit</span> status <span>2</span>
-main.go has changed
-building<span>..</span>.
-<span># github.com/feiffy/goblog</span>
-./main.go:16:22: syntax error: unexpected <span>)</span>, expecting name or <span>(</span>
-failed to build, error: <span>exit</span> status <span>2</span>
-main.go has changed
-building<span>..</span>.
-<span># github.com/feiffy/goblog</span>
-./main.go:16:22: undefined: http.StatusNot
-failed to build, error: <span>exit</span> status <span>2</span>
-main.go has changed
-building<span>..</span>.
-running<span>..</span>.
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><h3 id="修改响应-header" tabindex="-1"> 修改响应 header</h3>
-<p>我们发现上面代码中 <code>/about</code> 中的页面显示不正常，这是因为它的 <code>Content-Type: text/plain; charset=utf-8</code> 显然是错误的。那么我们来修改一下。</p>
-<div><pre><code><span>package</span> main
-
-<span>import</span> <span>(</span>
-    <span>"fmt"</span>
-    <span>"net/http"</span>
-<span>)</span>
-
-<span>func</span> <span>handlerFunc</span><span>(</span>w http<span>.</span>ResponseWriter<span>,</span> r <span>*</span>http<span>.</span>Request<span>)</span> <span>{</span>
-    w<span>.</span><span>Header</span><span>(</span><span>)</span><span>.</span><span>Set</span><span>(</span><span>"Content-Type"</span><span>,</span> <span>"text/html; charset=utf-8"</span><span>)</span>
-    <span>if</span> r<span>.</span>URL<span>.</span>Path <span>==</span> <span>"/"</span> <span>{</span>
-        fmt<span>.</span><span>Fprint</span><span>(</span>w<span>,</span> <span>"&lt;h1>Hello, 欢迎来到 goblog！&lt;/h1>"</span><span>)</span>
-    <span>}</span> <span>else</span> <span>if</span> r<span>.</span>URL<span>.</span>Path <span>==</span> <span>"/about"</span> <span>{</span>
-        fmt<span>.</span><span>Fprint</span><span>(</span>w<span>,</span> <span>"此博客是用以记录编程笔记，如您有反馈或建议，请联系 "</span><span>+</span>
-            <span>"&lt;a href=\"mailto:summer@example.com\">summer@example.com&lt;/a>"</span><span>)</span>
-    <span>}</span> <span>else</span> <span>{</span>
-        fmt<span>.</span><span>Fprint</span><span>(</span>w<span>,</span> <span>"&lt;h1>请求页面未找到 :(&lt;/h1>"</span><span>+</span>
-            <span>"&lt;p>如有疑惑，请联系我们。&lt;/p>"</span><span>)</span>
-    <span>}</span>
-<span>}</span>
-
-<span>func</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
-    http<span>.</span><span>HandleFunc</span><span>(</span><span>"/"</span><span>,</span> handlerFunc<span>)</span>
-    http<span>.</span><span>ListenAndServe</span><span>(</span><span>":3000"</span><span>,</span> <span>nil</span><span>)</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>这行代码设置了header头</p>
-<div><pre><code>w<span>.</span><span>Header</span><span>(</span><span>)</span><span>.</span><span>Set</span><span>(</span><span>"Content-Type"</span><span>,</span> <span>"text/html; charset=utf-8"</span><span>)</span>
-</code></pre><div aria-hidden="true"><div></div></div></div><p>那么我们如何知道 w 有 Header() 方法的呢？答案是看文档。</p>
-<h3 id="使用-godoc-文档" tabindex="-1"> 使用 godoc 文档</h3>
-<p>go自带了文档工具，1.18之后需要手动安装：</p>
-<div><pre><code>$ <span>GO111MODULE</span><span>=</span>on  go <span>install</span> golang.org/x/tools/cmd/godoc@latest
-</code></pre><div aria-hidden="true"><div></div></div></div><p>安装到了 <code>$GOPATH/bin/godoc</code> 下面，由于之前我们已经设置了路径环境变量，所以可以在命令行直接执行 <code>godoc</code>启动文档服务：</p>
-<div><pre><code>$ godoc <span>-http</span><span>=</span>:6060
-</code></pre><div aria-hidden="true"><div></div></div></div><p>然后在浏览器打开 <code>http://localhost:6060</code> 查看文档。</p>
-<p>找到 <code>net/http</code> 打开页面，搜索 <code>ResponseWriter</code>，定位到这个类型，滚动下来，点击 <code>Example</code> 取消折叠，即可看到示例代码，这里面看到一行输出状态码的。</p>
-<div><pre><code>w<span>.</span><span>WriteHeader</span><span>(</span>http<span>.</span>StatusOK<span>)</span>
-</code></pre><div aria-hidden="true"><div></div></div></div><p>那么，这时如果想要输出404状态码，该如何呢。</p>
-<p>只要在页面搜索 <code>StatusOk</code> 就能找到所有的状态码的定义。所以根据这一个示例，我们可以文档中获得很多帮助。</p>
-<p>加上了404之后的代码示例如下：</p>
-<div><pre><code><span>package</span> main
-
-<span>import</span> <span>(</span>
-    <span>"fmt"</span>
-    <span>"net/http"</span>
-<span>)</span>
-
-<span>func</span> <span>handlerFunc</span><span>(</span>w http<span>.</span>ResponseWriter<span>,</span> r <span>*</span>http<span>.</span>Request<span>)</span> <span>{</span>
-    w<span>.</span><span>Header</span><span>(</span><span>)</span><span>.</span><span>Set</span><span>(</span><span>"Content-Type"</span><span>,</span> <span>"text/html; charset=utf-8"</span><span>)</span>
-    <span>if</span> r<span>.</span>URL<span>.</span>Path <span>==</span> <span>"/"</span> <span>{</span>
-        fmt<span>.</span><span>Fprint</span><span>(</span>w<span>,</span> <span>"&lt;h1>Hello, 欢迎来到 goblog！&lt;/h1>"</span><span>)</span>
-    <span>}</span> <span>else</span> <span>if</span> r<span>.</span>URL<span>.</span>Path <span>==</span> <span>"/about"</span> <span>{</span>
-        fmt<span>.</span><span>Fprint</span><span>(</span>w<span>,</span> <span>"此博客是用以记录编程笔记，如您有反馈或建议，请联系 "</span><span>+</span>
-            <span>"&lt;a href=\"mailto:summer@example.com\">summer@example.com&lt;/a>"</span><span>)</span>
-    <span>}</span> <span>else</span> <span>{</span>
-        w<span>.</span><span>WriteHeader</span><span>(</span>http<span>.</span>StatusNotFound<span>)</span>
-        fmt<span>.</span><span>Fprint</span><span>(</span>w<span>,</span> <span>"&lt;h1>请求页面未找到 :(&lt;/h1>"</span><span>+</span>
-            <span>"&lt;p>如有疑惑，请联系我们。&lt;/p>"</span><span>)</span>
-    <span>}</span>
-<span>}</span>
-
-<span>func</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
-    http<span>.</span><span>HandleFunc</span><span>(</span><span>"/"</span><span>,</span> handlerFunc<span>)</span>
-    http<span>.</span><span>ListenAndServe</span><span>(</span><span>":3000"</span><span>,</span> <span>nil</span><span>)</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>然后浏览器随便访问一个不存在的页面，请求中显示404错误了。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>redis设置锁,(20)秒还未设置成功,请检查redis是否正常</title>
-      <link>https://newzone.top/_posts/2022-06-29-php-return-and-finally.html</link>
-      <guid>https://newzone.top/_posts/2022-06-29-php-return-and-finally.html</guid>
-      <source url="https://newzone.top/rss.xml">redis设置锁,(20)秒还未设置成功,请检查redis是否正常</source>
-      <pubDate>Wed, 29 Jun 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h3 id="问题" tabindex="-1"> 问题</h3>
-<p>昨晚上线之后，出现了不少次邮件告警：</p>
-<div><pre><code>您好  
-#redis设置锁,(20)秒还未设置成功,请检查redis是否正常  
-key: per:sorce-do-task:task_id:task_scanuser_id:8268817, value: per:sorce-do-task:task_id:task_scanuser_id:8268817
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><h3 id="分析" tabindex="-1"> 分析</h3>
-<p>看告警内容，是 redis 设置锁没有成功，一直等待这个锁。看了一下告警处的代码：</p>
+      <title>Linux Tar 简明教程</title>
+      <link>https://newzone.top/_posts/2018-04-22-linux-tar-tutorial-in-10-minutes.html</link>
+      <guid>https://newzone.top/_posts/2018-04-22-linux-tar-tutorial-in-10-minutes.html</guid>
+      <source url="https://newzone.top/rss.xml">Linux Tar 简明教程</source>
+      <pubDate>Sun, 22 Apr 2018 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>Tar 命令经常用但是它的各种参数又总是记不住，因此彻底梳理了一下，再也不会忘记。</p>
+<p>Tar 是 Linux 中的（压缩）归档工具。</p>
+<p>归档的意思与打包相同，就是把文件或目录或者多个文件和目录打包为一个文件，以便于传输。通常打包过程中会进行压缩操作，所以tar也附带了压缩的选项。压缩后的文件更小，以便于网络传输，减少等待时间。</p>
+<h2 id="选项1" tabindex="-1"> 选项1</h2>
+<p>tar 的第一个选项参数必须是下列（Acdrtux）之一：</p>
+<p>-c, --create</p>
+<p>创建一个新的归档</p>
+<p>-x, --extract</p>
+<p>从归档中提取文件</p>
+<p>-t, --list</p>
+<p>列出归档内容</p>
+<h2 id="选项2" tabindex="-1"> 选项2</h2>
+<p>-C, --directory DIR</p>
+<p>改变目录为DIR</p>
+<p>-f, --file ARCHIVE</p>
+<p>使用归档文件</p>
+<p>-j, --bzip2</p>
+<p>处理 .bz2 文件（压缩/解压缩）</p>
+<p>-J, --xz</p>
+<p>处理 .xz 文件（压缩/解压缩）</p>
+<p>-O, --to-stdout</p>
+<p>提取文件到标准输出（通常是显示器）</p>
+<p>-v, --verbose</p>
+<p>详细列出每个文件的处理情况</p>
+<p>-z, --gzip, --ungzip</p>
+<p>处理 .zip 文件（压缩/解压缩）</p>
+<h2 id="示例" tabindex="-1"> 示例</h2>
+<h3 id="从文件foo和bar创建归档archive-tar" tabindex="-1"> 从文件foo和bar创建归档archive.tar</h3>
 <div><pre><code>
-<span>/**
- * 设置锁,一定要返回成功,否则一直等待
- * <span>@param</span> <span>$key</span>
- * <span>@param</span> <span>$value</span>
- * <span>@param</span> <span><span>int</span></span> <span>$ttl</span> 过期时间
- * <span>@param</span> <span><span>int</span></span> <span>$maxsleeptime</span> 最长等待时间,超过该时间发邮件提醒
- * <span>@return</span> <span><span>mixed</span></span>
- */</span>
-<span>function</span> <span>set_synchronized_lock</span><span>(</span><span>$key</span><span>,</span> <span>$value</span><span>,</span> <span>$ttl</span> <span>=</span> <span>0</span><span>,</span> <span>$maxsleeptime</span> <span>=</span> <span>20</span><span>)</span>
-<span>{</span>
-	<span>$CI</span> <span>=</span> <span>&amp;</span><span>get_instance</span><span>(</span><span>)</span><span>;</span>
-	<span>$CI</span><span>-></span><span>load</span><span>-></span><span>driver</span><span>(</span><span>'cache'</span><span>)</span><span>;</span>
-	<span>$sleep</span> <span>=</span> <span>0</span><span>;</span>
-	<span>while</span> <span>(</span><span>!</span><span>$CI</span><span>-></span><span>cache</span><span>-></span><span>redis</span><span>-></span><span>savenx</span><span>(</span><span>$key</span><span>,</span> <span>$value</span><span>,</span> <span>$ttl</span><span>)</span><span>)</span> <span>{</span>
-		<span>sleep</span><span>(</span><span>1</span><span>)</span><span>;</span>
-		<span>$sleep</span><span>++</span><span>;</span>
-		<span>if</span> <span>(</span><span>$sleep</span> <span>></span> <span>$maxsleeptime</span><span>)</span> <span>{</span>
-			<span>$content</span> <span>=</span> <span>"#redis设置锁,(<span><span>$maxsleeptime</span></span>)秒还未设置成功,请检查redis是否正常&lt;br>key: <span><span>$key</span></span>, value: <span><span>$value</span></span>"</span><span>;</span>
-			<span>send_email</span><span>(</span><span>'REDIS_LOCK_NOTIFY'</span><span>,</span> <span>[</span><span>]</span><span>,</span> <span>[</span><span>$content</span><span>]</span><span>)</span><span>;</span>
-			<span>break</span><span>;</span>
-		<span>}</span>
-	<span>}</span>
-	<span>return</span> <span>true</span><span>;</span>
-<span>}</span>
+<span>tar</span> <span>-cf</span> archive.tar foo bar
 
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>这里循环间隔1s不断用 <code>savenx</code> 方法来设置锁（获取锁），然后它失败了，每次失败sleep+1，等到sleep超过最大$maxsleeptime时间（预设为20s）时就发邮件告警。</p>
-<p>是哪些原因会导致它失败呢？</p>
-<p>进入 <code>savenx</code> 源码看，实际上调用的是 redis 的 <a href="https://redis.io/commands/setnx" target="_blank" rel="noopener noreferrer">setnx</a> 命令，这个命令的官方说明是：</p>
-<div><pre><code>Return Integer reply, specifically:
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>-c 创建新的归档文件</p>
+<p>-f ARCHIVE 使用归档文件</p>
+<h3 id="从目录-home-demo-创建归档demo-tar" tabindex="-1"> 从目录/home/demo/创建归档demo.tar</h3>
+<p>tar -cf demo.tar /home/demo/</p>
+<p>-c 创建新的归档文件</p>
+<p>-f ARCHIVE 使用归档文件</p>
+<p>如果想看到每个文件的处理过程，那么可以加上 -v 选项。</p>
+<h3 id="详细列出archive-tar中的所有文件" tabindex="-1"> 详细列出archive.tar中的所有文件</h3>
+<div><pre><code>
+<span>tar</span> <span>-tvf</span> archive.tar
 
-<span>1</span> <span>if</span> the key was <span>set</span>
-<span>0</span> <span>if</span> the key was not <span>set</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>也就是说在不断循环的尝试过程中，这个 key 表示的值已经存在，也就是说锁一直在被别人占用。</p>
-<p>这个时候，我们需要去看是谁占用了这个 key，我们通过告警邮件中的 key-value 信息找到报错业务处的代码：</p>
-<div><pre><code><span>public</span> <span>function</span> <span>do_task_post</span><span>(</span><span>)</span>
-<span>{</span>
-	<span>$lock_key</span> <span>=</span> <span>'per:sorce-do-task:task_id:'</span> <span>.</span> <span>$task_ids</span> <span>.</span> <span>'user_id:'</span> <span>.</span> <span>$this</span><span>-></span><span>userData</span><span>[</span><span>'user_id'</span><span>]</span><span>;</span>  
-	<span>$this</span><span>-></span><span>set_lock</span><span>(</span><span>$lock_key</span><span>,</span> <span>'做积分任务加锁'</span><span>)</span><span>;</span>
-	<span>try</span> <span>{</span>
-		<span>...</span>	
-		<span>return</span> <span>$this</span><span>-></span><span>sendFail</span><span>(</span><span>null</span><span>,</span> <span>'没有可完成的任务'</span><span>)</span><span>;</span>
-	<span>}</span> <span>catch</span><span>(</span><span>Exception</span> <span>$e</span><span>)</span> <span>{</span>
-		<span>...</span>
-	<span>}</span> <span>finally</span><span>(</span><span>)</span> <span>{</span>
-		<span>$this</span><span>-></span><span>release_lock</span><span>(</span><span>$lock_key</span><span>,</span> <span>'做积分任务解锁'</span><span>)</span><span>;</span>
-	<span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>这个业务加解锁相关的业务抽象如上，第4行是加锁，第12行是解锁。</p>
-<p>这个业务之前一直正常，理论上锁不应该一直占用。唯一释放锁的地方就是 <code>finally</code> 语句块中的 <code>release_lock()</code>，这个方法本身没有改动过，应该不会突然就一直释放失败了。还有一种可能就是它没有执行。</p>
-<p>是不是因为有慢查询导致它没有执行？这次没有修改到这个业务，看了业务代码，没有慢查询。这个原因PASS。</p>
-<p>我们看到 <code>try</code> 中有 <code>return</code> 语句，是不是这个 <code>return</code> 语句提前返回了？</p>
-<p>本地调试了几次确实提前返回了，切换到上线前的分支版本又调试了几次，发现是先释放锁再返回的。仔细对比代码，发现这次修改了 <code>$this-&gt;sendFail()</code> 方法，把里面的 <code>return</code> 改为了 <code>exit</code> 了。原来是这个原因？是它影响了 <code>finally</code> 语句块的执行。</p>
-<div><pre><code><span>public</span> <span>function</span> <span>sendFail</span><span>(</span><span>$data</span> <span>,</span> <span>$msg</span><span>)</span><span>{</span>  
-    <span>$response</span> <span>=</span> <span>[</span>  
-        <span>'code'</span> <span>=></span> <span>-</span><span>1</span><span>,</span>  
-        <span>'data'</span> <span>=></span> <span>$data</span><span>,</span>  
-        <span>'msg'</span>  <span>=></span> <span>$msg</span>  
-    <span>]</span><span>;</span>  
-    <span>return</span><span>;</span> <span>// 昨晚上线后是 exit;</span>
-<span>}</span>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>-t 列出归档内容</p>
+<p>-v 显示文件详细信息</p>
+<p>-f ARCHIVE 使用归档文件</p>
+<h3 id="提取archive-tar中的所有文件" tabindex="-1"> 提取archive.tar中的所有文件</h3>
+<div><pre><code>
+<span>tar</span> <span>-xf</span> archive.tar
 
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>那么 <code>finally</code> 语句跟 <code>return</code> 和 <code>exit</code> 有什么关系呢？我找了下官方文档看，果然有解释：官方文档关于 <code>finally</code> 解释如下：</p>
-<blockquote>
-<p>finally 代码块可以放在 catch 之后，或者直接代替它。 无论是否抛出了异常，在 try 和 catch 之后、在执行后续代码之前， 放在 finally 里的代码总是会执行。</p>
-<p><strong>值得注意的是 finally 和 return 语句之间存在相互影响。 如果在 try 或 catch 里遇到 return，仍然会执行 finally 里的代码。 而且，遇到 return 语句时，会先执行 finally 再返回结果。 此外，如果 finally 里也包含了 return 语句，将返回 finally 里的值。</strong></p>
-</blockquote>
-<h2 id="总结" tabindex="-1"> 总结</h2>
-<ul>
-<li><code>try-catch-finally</code> 的执行顺序是：try 语句 - (exit) -  finally语句 -（finally return） - (try return)</li>
-<li>改基类代码时要慎重，测试覆盖全。</li>
-<li>禁止使用 exit，因为有的框架可能还会在控制器返回之后，会有后置默认处理。</li>
-</ul>
-]]></content:encoded>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>-x 提取归档文件</p>
+<p>-f ARCHIVE 使用归档文件</p>
+<p>如果想看到每个文件的处理过程，那么可以加上 -v 选项。</p>
+<h3 id="【最常用】从目录-home-demo-创建gzip压缩归档demo-tar-gz" tabindex="-1"> 【最常用】从目录/home/demo/创建gzip压缩归档demo.tar.gz</h3>
+<div><pre><code>
+<span>tar</span> <span>-czf</span> demo.tar.gz /home/demo/
+
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>-c 创建新的归档文件</p>
+<p>-z 处理zip压缩</p>
+<p>-f ARCHIVE 使用归档文件</p>
+<p>如果想看到每个文件的处理过程，那么可以加上 -v 选项。</p>
+<h3 id="从多个目录-home-demo1-home-demo2和文件hi-txt创建gzip压缩归档demo-tar-gz" tabindex="-1"> 从多个目录/home/demo1 /home/demo2和文件hi.txt创建gzip压缩归档demo.tar.gz</h3>
+<div><pre><code>
+<span>tar</span> <span>-czf</span> demo.tar.gz /home/demo1 /home/demo2 hi.txt
+
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>-c 创建新的归档文件</p>
+<p>-z 处理zip压缩</p>
+<p>-f ARCHIVE 使用归档文件</p>
+<p>如果想看到每个文件的处理过程，那么可以加上 -v 选项。</p>
+<h3 id="从目录-home-demo创建bzip2压缩归档demo-tar-bz2" tabindex="-1"> 从目录/home/demo创建bzip2压缩归档demo.tar.bz2</h3>
+<div><pre><code>
+<span>tar</span> <span>-cjf</span> demo.tar.gz /home/demo
+
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>-c 创建新的归档文件</p>
+<p>-j 处理bzip2压缩文件</p>
+<p>-f ARCHIVE 使用归档文件</p>
+<p>如果想看到每个文件的处理过程，那么可以加上 -v 选项。</p>
+<p>bzip2比gzip压缩文件更小，但压缩时间变长了</p>
+<h3 id="【最常用】提取gzip压缩归档test-tar-gz的内容到指定目录-home-demo-中" tabindex="-1"> 【最常用】提取gzip压缩归档test.tar.gz的内容到指定目录/home/demo/中</h3>
+<div><pre><code>
+<span>tar</span> <span>-xzf</span> test.tar.gz <span>-C</span> /home/demo/
+
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>-x 提取归档内容</p>
+<p>-z 处理gzip压缩文件</p>
+<p>-f ARCHIVE 使用归档文件</p>
+<p>-C DIR：改变目录到DIR</p>
+<h3 id="提取bzip2压缩归档test-tar-bz2的内容到指定目录-home-demo-中" tabindex="-1"> 提取bzip2压缩归档test.tar.bz2的内容到指定目录/home/demo/中</h3>
+<div><pre><code>
+<span>tar</span> <span>-xjf</span> test.tar.bz2 <span>-C</span> /home/demo/
+
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>-x 提取归档内容</p>
+<p>-j 处理bzip2压缩文件</p>
+<p>-f ARCHIVE 使用归档文件</p>
+<p>-C DIR：改变目录到DIR</p>
+<h3 id="提取xz压缩归档test-tar-xz的内容到指定目录-home-demo-中" tabindex="-1"> 提取xz压缩归档test.tar.xz的内容到指定目录/home/demo/中</h3>
+<div><pre><code>
+<span>tar</span> <span>-xJf</span> test.tar.xz <span>-C</span> /home/demo/
+
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>-x 提取归档内容</p>
+<p>-J 处理xz压缩文件</p>
+<p>-f ARCHIVE 使用归档文件</p>
+<p>-C DIR：改变目录到DIR</p>
+<h2 id="faqs" tabindex="-1"> FAQs</h2>
+<h3 id="tar-removing-leading-from-member-names" tabindex="-1"> tar: Removing leading `/’ from member names</h3>
+<p>其原因是tar默认为相对路径，使用绝对路径的话就回报这个错，可以使用-P参数（注意大写）解决这个问题</p>
+<div><pre><code>
+$ <span>tar</span> <span>-zcPf</span> /backup/<span>$WebBakName</span> <span>$WEB_DATA</span>
+
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div>]]></content:encoded>
     </item>
   </channel>
 </rss>
