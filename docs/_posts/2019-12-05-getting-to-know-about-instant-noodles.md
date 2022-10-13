@@ -203,7 +203,7 @@ order: -1
 我去，我以为买的是面，直到打开的时候才发现是粉丝：
 
 ![](/blog/imgs/a68535f0c9aced09a6b442caa418b999.jpg)
-![]()
+// pic
 ![](/blog/imgs/22e4bf3b18ca84f36ee2c52e5075258d.jpg)
 
 ![](/blog/imgs/6965ecc6ee26c1d704e93420336d8ab4.jpg)
